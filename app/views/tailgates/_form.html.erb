@@ -1,0 +1,32 @@
+<%= form_with(model: tailgate) do |form| %>
+  <% if tailgate.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(tailgate.errors.count, "error") %> prohibited this tailgate from being saved:</h2>
+
+      <ul>
+        <% tailgate.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :stadium_id, style: "display: block" %>
+    <%= form.text_field :stadium_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

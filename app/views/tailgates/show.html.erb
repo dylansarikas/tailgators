@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tailgate %>
+
+<div>
+  <%= link_to "Edit this tailgate", edit_tailgate_path(@tailgate) %> |
+  <%= link_to "Back to tailgates", tailgates_path %>
+
+  <%= button_to "Destroy this tailgate", @tailgate, method: :delete %>
+</div>

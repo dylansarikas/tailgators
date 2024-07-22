@@ -12,3 +12,6 @@ Stadium.create(latitude: "42.340115", longitude: "-83.046341", name: "Ford Field
 Stadium.create(latitude: "44.973774", longitude: "-93.258736", name: "U.S. Bank Stadium", team: "Minnesota Vikings")
 
 User.create(email: "hungusbungus@example.com", password: "password", username: "hungusbungus")
+
+Hotel.create(name: "Lighthouse Inn", address: "1515 Memorial Drive Two Rivers, Wisconsin 54241", link: "https://www.lhinn.com/", stadium_id: 2)
+Hotel.create(name: "Country Inn and Suites Elk Grove Village", address: "1160 W Devon Ave, Elk Grove Village, IL 60007", stadium_id: 1)

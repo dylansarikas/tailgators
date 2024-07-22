@@ -19,7 +19,7 @@
 #  stadium_id  (stadium_id => stadiums.id)
 #
 class Hotel < ApplicationRecord
-  validates :name, :address, :stadium_id
+  validates :name, :address, :stadium_id, presence: true
 
   belongs_to :stadium
 end

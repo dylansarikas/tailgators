@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.1"
 
+# User catch all
+gem "devise"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 
@@ -75,7 +78,6 @@ end
 # ===========
 gem "appdev_support"
 gem "awesome_print"
-gem "devise"
 gem "dotenv-rails"
 gem "faker"
 gem "htmlbeautifier"

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "stadiums#index"
-
+  
+  resources :hotels
   resources :stadiums
   devise_for :users
 

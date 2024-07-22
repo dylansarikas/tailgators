@@ -18,5 +18,6 @@
 #  stadium_id  (stadium_id => stadiums.id)
 #
 class Tailgate < ApplicationRecord
+  validates :name, :location, :stadium_id, presence: true
   belongs_to :stadium
 end

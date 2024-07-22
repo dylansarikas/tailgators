@@ -12,4 +12,6 @@
 #
 class Stadium < ApplicationRecord
   validates :latitude, :longitude, :name, :team, presence: true
+  
+  has_many :stadiums
 end

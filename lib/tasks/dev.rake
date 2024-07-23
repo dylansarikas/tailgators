@@ -67,10 +67,17 @@ unless Rails.env.production?
 
     desc "Add sample advices"
     task sample_advices: :environment do
-      [Stadium, ]
-      11.times do
-        puts "wow"
+      types = [Stadium, Hotel, Tailgate]
+      100.times do
+        random = types.sample
+        Advice.create(
+          body: "#{Faker::Movie.quote}",
+          user_id: User.all.sample.id,
+          adviceable_id: random.all.sample.id,
+          adviceable_type: random
+        )
       end
+      puts "Created 100 Advices"
     end
 
   end

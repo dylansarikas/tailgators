@@ -17,3 +17,5 @@ Hotel.create(name: "Lighthouse Inn", address: "1515 Memorial Drive Two Rivers, W
 Hotel.create(name: "Country Inn and Suites Elk Grove Village", address: "1160 W Devon Ave, Elk Grove Village, IL 60007", stadium_id: 1)
 
 Tailgate.create(name: "Lambeau Field Lot 1 Tailgate", location: "Lot 1, S Oneida St, Green Bay, WI 54304", stadium_id: 2)
+
+Advice.create(adviceable_id: 4, adviceable_type: Stadium, body: "Really good food", user_id: 1)

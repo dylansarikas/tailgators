@@ -31,13 +31,18 @@ unless Rails.env.production?
     desc "Add sample users"
     task sample_users: :environment do
       11.times do
-        puts "wow"
+        User.create(
+          email: "#{Faker::Name.first_name.downcase}@example.com",
+          password: "password",
+          username: "#{Faker::Games::Fallout.character.downcase.gsub(/[^0-9a-z]/i, "")}"
+        )
+        puts "Created 11 Users"
       end
     end
 
     desc "Add sample hotels"
     task sample_hotels: :environment do
-      11.times do
+      20.times do
         puts "wow"
       end
     end

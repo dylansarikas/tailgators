@@ -2,7 +2,7 @@
 #
 # Table name: stadiums
 #
-#  id         :integer          not null, primary key
+#  id         :bigint           not null, primary key
 #  latitude   :string
 #  longitude  :string
 #  name       :string

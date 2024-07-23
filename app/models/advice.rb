@@ -2,13 +2,13 @@
 #
 # Table name: advices
 #
-#  id              :integer          not null, primary key
+#  id              :bigint           not null, primary key
 #  adviceable_type :string           not null
 #  body            :text
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  adviceable_id   :integer          not null
-#  user_id         :integer          not null
+#  adviceable_id   :bigint           not null
+#  user_id         :bigint           not null
 #
 # Indexes
 #
@@ -17,7 +17,7 @@
 #
 # Foreign Keys
 #
-#  user_id  (user_id => users.id)
+#  fk_rails_...  (user_id => users.id)
 #
 class Advice < ApplicationRecord
   belongs_to :user

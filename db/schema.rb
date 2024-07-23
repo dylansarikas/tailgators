@@ -11,11 +11,14 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2024_07_23_164625) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "advices", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.text "body"
     t.string "adviceable_type", null: false
-    t.integer "adviceable_id", null: false
+    t.bigint "adviceable_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["adviceable_type", "adviceable_id"], name: "index_advices_on_adviceable"
@@ -26,7 +29,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_23_164625) do
     t.string "name"
     t.string "link"
     t.string "address"
-    t.integer "stadium_id", null: false
+    t.bigint "stadium_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["stadium_id"], name: "index_hotels_on_stadium_id"
@@ -44,7 +47,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_23_164625) do
   create_table "tailgates", force: :cascade do |t|
     t.string "location"
     t.string "name"
-    t.integer "stadium_id", null: false
+    t.bigint "stadium_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["stadium_id"], name: "index_tailgates_on_stadium_id"

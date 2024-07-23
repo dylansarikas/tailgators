@@ -55,13 +55,19 @@ unless Rails.env.production?
 
     desc "Add sample tailgates"
     task sample_tailgates: :environment do
-      11.times do
-        puts "wow"
+      20.times do
+        Tailgate.create(
+          name: "#{Faker::Fantasy::Tolkien.location} Tailgate",
+          location: "#{Faker::Address.full_address}",
+          stadium_id: Stadium.all.sample.id
+        )
       end
+      puts "Created 20 Tailgates"
     end
 
     desc "Add sample advices"
     task sample_advices: :environment do
+      [Stadium, ]
       11.times do
         puts "wow"
       end

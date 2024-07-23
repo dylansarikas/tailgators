@@ -36,15 +36,21 @@ unless Rails.env.production?
           password: "password",
           username: "#{Faker::Games::Fallout.character.downcase.gsub(/[^0-9a-z]/i, "")}"
         )
-        puts "Created 11 Users"
       end
+      puts "Created 11 Users"
     end
 
     desc "Add sample hotels"
     task sample_hotels: :environment do
       20.times do
-        puts "wow"
+        Hotel.create(
+          name: "The #{Faker::FunnyName.name} Hotel",
+          link: "google.com",
+          address: "#{Faker::Address.full_address}",
+          stadium_id: Stadium.all.sample.id
+        )
       end
+      puts "Created 20 Hotels"
     end
 
     desc "Add sample tailgates"

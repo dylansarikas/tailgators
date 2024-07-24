@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   resources :hotels, only: [:index, :show]
   resources :stadiums, only: [:index, :show]
-  resources :tailgates, only: [:index, :show]
+  resources :tailgates
   resources :advices, except: [:index]
   devise_for :users
 

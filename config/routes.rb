@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   root "stadiums#index"
   
+  devise_for :users
+  
   resources :hotels, only: [:index, :show]
   resources :stadiums, only: [:index, :show]
   resources :tailgates
   resources :advices, except: [:index]
-  devise_for :users
 
   # This is a blank app! Pick your first screen, build out the RCAV, and go from there. E.g.:
 

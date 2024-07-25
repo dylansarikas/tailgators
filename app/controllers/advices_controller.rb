@@ -23,6 +23,7 @@ class AdvicesController < ApplicationController
   def create
     @advice = Advice.new(advice_params)
     # @advice.user_id = current_user
+    # Why doesn't this work?
 
     respond_to do |format|
       if @advice.save

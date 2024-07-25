@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Stadium.create(latitude: "41.862366", longitude: "-87.617256", name: "Soldier Field", team: "Chicago Bears", stadium: "soldier.jpg")
-Stadium.create(latitude: "44.501308", longitude: "-88.062317.", name: "Lambeau Field", team: "Green Bay Packers", stadium: "lambeau.jpg")
-Stadium.create(latitude: "42.340115", longitude: "-83.046341", name: "Ford Field", team: "Detroit Lions", stadium: "ford.jpg")
-Stadium.create(latitude: "44.973774", longitude: "-93.258736", name: "U.S. Bank Stadium", team: "Minnesota Vikings", stadium: "usbank.jpg")
+Stadium.create(latitude: "41.862366", longitude: "-87.617256", name: "Soldier Field", team: "Chicago Bears", image: "soldier.jpg")
+Stadium.create(latitude: "44.501308", longitude: "-88.062317.", name: "Lambeau Field", team: "Green Bay Packers", image: "lambeau.jpg")
+Stadium.create(latitude: "42.340115", longitude: "-83.046341", name: "Ford Field", team: "Detroit Lions", image: "ford.jpg")
+Stadium.create(latitude: "44.973774", longitude: "-93.258736", name: "U.S. Bank Stadium", team: "Minnesota Vikings", image: "usbank.jpg")
 
 User.create(email: "hungusbungus@example.com", password: "password", username: "hungusbungus")
 

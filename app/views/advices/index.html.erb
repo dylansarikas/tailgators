@@ -1,12 +1,13 @@
 <h1>Advices</h1>
 
 <div id="advices">
-  <% @advices.each do |advice| %>
-    <%= render advice %>
-    <p>
-      <%= link_to "Show this advice", advice %>
-    </p>
-  <% end %>
+  <ul class="list-group list-group-flush">
+    <% @advices.each do |advice| %>
+      <li class="list-group-item">
+        <%= render advice %>
+      </li>
+    <% end %>
+  </ul>
 </div>
 
 <%= link_to "New advice", new_advice_path %>

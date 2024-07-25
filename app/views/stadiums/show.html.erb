@@ -1,5 +1,17 @@
 <%= render @stadium %>
 
+<h3 class="mt-2">Helpful Tips!</h3>
+
+<hr>
+
+<ul class="list-group list-group-flush">
+  <% @stadium.advices.each do |advice| %>
+    <li class="list-group-item">
+      <%= render advice %>
+    </li>
+  <% end %>
+</ul>
+
 <div>
   <%= link_to "Back to Stadiums", stadiums_path, class: "btn btn-outline-primary m-2" %>
 </div>

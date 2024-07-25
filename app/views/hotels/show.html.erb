@@ -1,5 +1,17 @@
 <%= render @hotel %>
 
+<h3 class="mt-2">Helpful Tips!</h3>
+
+<hr>
+
+<ul class="list-group list-group-flush">
+  <% @hotel.advices.each do |advice| %>
+    <li class="list-group-item">
+      <%= render advice %>
+    </li>
+  <% end %>
+</ul>
+
 <div>
   <%= link_to "Back to hotels", hotels_path %>
 </div>

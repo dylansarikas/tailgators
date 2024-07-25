@@ -1,31 +1,7 @@
-<div id="<%= dom_id stadium %>">
-  <p>
-    <strong>Name:</strong>
-    <%= stadium.name %>
-  </p>
-
-  <p>
-    <strong>Team:</strong>
-    <%= stadium.team %>
-  </p>
-
-  <p>
-    <strong>Latitude:</strong>
-    <%= stadium.latitude %>
-  </p>
-
-  <p>
-    <strong>Longitude:</strong>
-    <%= stadium.longitude %>
-  </p>
-
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src=<%=image_path("ford")%> class="card-img-top" alt="...">
+<div class="card" style="width: 18rem; m-4">
+  <img src=<%=image_path(stadium.image)%> class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title"><%= stadium.team %></h5>
     <p class="card-text"><%= stadium.name %></p>
-    <%= link_to "Show this stadium", stadium %>
   </div>
 </div>

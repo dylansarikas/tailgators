@@ -4,7 +4,7 @@
   <% @stadiums.each do |stadium| %>
     <%= render stadium %>
     <p>
-      <%= link_to "Show this stadium", stadium %>
+      <%= link_to "Go to Stadium", stadium, class: "btn btn-outline-primary m-2" %>
     </p>
   <% end %>
 </div>

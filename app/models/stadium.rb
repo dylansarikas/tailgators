@@ -3,6 +3,7 @@
 # Table name: stadiums
 #
 #  id         :bigint           not null, primary key
+#  image      :string
 #  latitude   :string
 #  longitude  :string
 #  name       :string

@@ -60,7 +60,7 @@ class StadiumsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_stadium
-      @stadium = Stadium.find(params[:id])
+      @stadium = Stadium.find_by(name: params[:name])
     end
 
     # Only allow a list of trusted parameters through.

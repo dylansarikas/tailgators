@@ -12,6 +12,13 @@
   <% end %>
 </ul>
 
+<h3>Share your tips!  </h3>
+
+<div  class="card-body">
+  <!--i dont understand why stadium.advice.build doesnt work-->
+  <%= render "advices/form", advice: Advice.new(adviceable_id: @stadium.id, adviceable_type: @stadium.class, user_id: current_user.id) %>
+</div>
+
 <div>
   <%= link_to "Back to Stadiums", stadiums_path, class: "btn btn-outline-primary m-2" %>
 </div>

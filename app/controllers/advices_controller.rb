@@ -22,10 +22,12 @@ class AdvicesController < ApplicationController
   # POST /advices or /advices.json
   def create
     @advice = Advice.new(advice_params)
+    # @advice.user_id = current_user
+    # Why doesn't this work?
 
     respond_to do |format|
       if @advice.save
-        format.html { redirect_to advice_url(@advice), notice: "Advice was successfully created." }
+        format.html { redirect_back_or_to advice_url(@advice), notice: "Advice was successfully created." }
         format.json { render :show, status: :created, location: @advice }
       else
         format.html { render :new, status: :unprocessable_entity }

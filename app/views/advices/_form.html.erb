@@ -11,10 +11,9 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
+  <%= form.hidden_field :adviceable_id %>
+  <%= form.hidden_field :adviceable_type %>
+  <%= form.hidden_field :user_id %>
 
   <div>
     <%= form.label :body, style: "display: block" %>
@@ -22,11 +21,6 @@
   </div>
 
   <div>
-    <%= form.label :adviceable_id, style: "display: block" %>
-    <%= form.text_field :adviceable_id %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit :Submit, class: "btn btn-outline-success m-2" %>
   </div>
 <% end %>

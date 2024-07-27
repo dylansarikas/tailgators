@@ -59,7 +59,7 @@ class TailgatesController < ApplicationController
   end
 
   def by_stadium
-    @tailgates = Tailgate.where("stadium_id = #{@stadium_hotel.id}")
+    @tailgates = Tailgate.where("stadium_id = #{@stadium_tailgate.id}")
     render "by_stadium"
   end
 
@@ -70,7 +70,7 @@ class TailgatesController < ApplicationController
     end
 
     def set_stadium
-      @stadium_hotel = Stadium.find_by(name: params[:name])
+      @stadium_tailgate = Stadium.find_by(name: params[:name])
     end
 
     # Only allow a list of trusted parameters through.

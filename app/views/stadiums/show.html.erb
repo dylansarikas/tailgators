@@ -1,5 +1,9 @@
 <%= render @stadium %>
 
+<%= link_to 'Check out Hotels', hotels_path, class: "btn btn-outline-primary m-2" %>
+
+<%= link_to 'Check out Tailgates', tailgates_by_stadium_path, class: "btn btn-outline-primary m-2" %>
+
 <h3 class="mt-2">Helpful Tips!</h3>
 
 <hr>
@@ -16,7 +20,10 @@
 
 <div  class="card-body">
   <!--i dont understand why stadium.advice.build doesnt work-->
-  <%= render "advices/form", advice: Advice.new(adviceable_id: @stadium.id, adviceable_type: @stadium.class, user_id: current_user.id) %>
+  <% if current_user %>
+    <%= render "advices/form", advice: Advice.new(adviceable_id: @stadium.id, adviceable_type: @stadium.class, user_id: current_user.id) %>    
+  <% end %>
+
 </div>
 
 <div>

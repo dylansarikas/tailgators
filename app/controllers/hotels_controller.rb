@@ -1,9 +1,10 @@
 class HotelsController < ApplicationController
   before_action :set_hotel, only: :show
+  before_action :set_stadium, only: :index
 
   # GET /hotels or /hotels.json
   def index
-    @hotels = Hotel.all
+    @hotels = Hotel.where("stadium_id = #{@stadium_hotel.id}")
   end
 
   # GET /hotels/1 or /hotels/1.json
@@ -61,6 +62,10 @@ class HotelsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_hotel
       @hotel = Hotel.find(params[:id])
+    end
+
+    def set_stadium
+      @stadium_hotel = Stadium.find_by(name: params[:name])
     end
 
     # Only allow a list of trusted parameters through.

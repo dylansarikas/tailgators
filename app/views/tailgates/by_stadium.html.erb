@@ -1,0 +1,12 @@
+<h1>Tailgates for <%= @stadium_tailgate.name %></h1>
+
+<div id="tailgates">
+  <% @tailgates.each do |tailgate| %>
+    <%= render tailgate %>
+    <p>
+      <%= link_to "Show this tailgate", tailgate %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New tailgate", new_tailgate_path %>

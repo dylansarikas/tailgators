@@ -1,5 +1,6 @@
 class TailgatesController < ApplicationController
   before_action :set_tailgate, only: %i[ show edit update destroy ]
+  before_action :set_stadium, only: :by_stadium
 
   # GET /tailgates or /tailgates.json
   def index
@@ -57,10 +58,19 @@ class TailgatesController < ApplicationController
     end
   end
 
+  def by_stadium
+    @tailgates = Tailgate.where("stadium_id = #{@stadium_tailgate.id}")
+    render "by_stadium"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tailgate
       @tailgate = Tailgate.find(params[:id])
+    end
+
+    def set_stadium
+      @stadium_tailgate = Stadium.find_by(name: params[:name])
     end
 
     # Only allow a list of trusted parameters through.

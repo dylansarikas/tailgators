@@ -4,7 +4,10 @@
   <% @stadiums.each do |stadium| %>
     <%= render stadium %>
     <p>
-      <%= link_to "Go to Stadium", stadium, class: "btn btn-outline-primary m-2" %>
+      <%#= link_to "Go to Stadium", stadium, class: "btn btn-outline-primary m-2" %>
+      <%= link_to stadium_path(stadium.name), class: "btn btn-outline-primary m-2" do %>
+        To Stadium
+      <% end %>
     </p>
   <% end %>
 </div>

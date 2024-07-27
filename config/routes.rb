@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'     
   end
   
-  resources :hotels, only: [:index, :show]
+  # resources :hotels, only: [:index, :show]
+  resources :hotels, only: [:show]
   # resources :stadiums, only: [:index, :show]
   resources :stadiums, only: [:index]
   resources :tailgates
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
   resources :advices
   
   get ":name" => "stadiums#show", as: :stadium
+  get ":name/hotels" => "hotels#index", as: :hotels
 
   # This is a blank app! Pick your first screen, build out the RCAV, and go from there. E.g.:
 

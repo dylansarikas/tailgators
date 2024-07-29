@@ -14,9 +14,12 @@
 
 <div  class="card-body">
   <!--i dont understand why stadium.advice.build doesnt work-->
-  <%= render "advices/form", advice: Advice.new(adviceable_id: @hotel.id, adviceable_type: @hotel.class, user_id: current_user.id) %>
+  <% if current_user %>
+    <%= render "advices/form", advice: Advice.new(adviceable_id: @hotel.id, adviceable_type: @hotel.class, user_id: current_user.id) %>
+  <% end %>
+  
 </div>
 
 <div>
-  <%= link_to "Back to hotels", hotels_path, class: "btn btn-outline-primary m-2" %>
+  <%= link_to "Back to #{@hotel.stadium.team} hotels", hotels_path(@hotel.stadium.name), class: "btn btn-outline-primary m-2" %>
 </div>

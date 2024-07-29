@@ -1,12 +1,33 @@
 <h1>Tailgates</h1>
 
-<div id="tailgates">
-  <% @tailgates.each do |tailgate| %>
-    <%= render tailgate %>
-    <p>
-      <%= link_to "Show this tailgate", tailgate %>
-    </p>
+<div>
+  <% @stadiums.each do |stadium| %>
+    <%= link_to stadium_path(stadium.name) do %>
+        <h2><%= stadium.name %></h2>
+      <% end %>
+    <div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Location</th>
+            <th scope="col">Link</th>
+          </tr>
+        </thead>
+        <% stadium.tailgates.each do |tailgate| %>
+          <tbody>
+            <tr>
+              <td> <%= tailgate.name %> </td>
+              <td> <%= tailgate.location %> </td>
+              <td> <%= link_to 'Tailgate page', tailgate %> </td>
+            </tr>
+          </tbody>
+        <% end %>
+      </table>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New tailgate", new_tailgate_path %>
+<% if current_user %>
+  <%= link_to "New tailgate", new_tailgate_path %>  
+<% end %>

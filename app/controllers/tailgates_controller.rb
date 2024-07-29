@@ -5,6 +5,7 @@ class TailgatesController < ApplicationController
   # GET /tailgates or /tailgates.json
   def index
     @tailgates = Tailgate.all
+    @stadiums = Stadium.all
   end
 
   # GET /tailgates/1 or /tailgates/1.json

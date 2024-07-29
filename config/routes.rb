@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root "stadiums#index"
+  
+  # root "stadiums#index"
+  root "pages#index"
   
   devise_for :users
 

@@ -1,0 +1,22 @@
+<h1>Welcome to Tailgators!</h1>
+<h3>For all of your football tailgating needs</h3>
+
+<br>
+
+<h5>Top Stadiums</h5>
+<div class="d-flex p-2 justify-content-evenly flex-wrap">
+  <div class="mt-4"><%= render @gb %></div>
+  <div class="mt-4"><%= render @chi %></div>
+  <div class="mt-4"><%= render @det %></div>
+  <div class="mt-4"><%= render @min %></div>
+</div>
+  
+<br>
+
+<h5>Popular Tailgates</h5>
+<div class="d-flex p-2 justify-content-evenly flex-wrap">
+  <div class="mt-4"><%= render @gb.tailgates.sample %></div>
+  <div class="mt-4"><%= render @chi.tailgates.sample %></div>
+  <div class="mt-4"><%= render @det.tailgates.sample %></div>
+  <div class="mt-4"><%= render @min.tailgates.sample %></div>
+</div>

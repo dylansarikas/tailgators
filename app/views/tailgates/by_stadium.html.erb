@@ -1,11 +1,13 @@
 <h1>Tailgates for <%= @stadium_tailgate.name %></h1>
 
-<div id="tailgates">
+<div class="d-flex p-2 justify-content-around flex-wrap">
   <% @tailgates.each do |tailgate| %>
-    <%= render tailgate %>
-    <p>
-      <%= link_to "Show this tailgate", tailgate %>
-    </p>
+    <div>
+      <%= render tailgate %>
+      <p>
+        <%= link_to "Show this tailgate", tailgate %>
+      </p>
+    </div>
   <% end %>
 </div>
 

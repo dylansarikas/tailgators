@@ -17,4 +17,8 @@ class Stadium < ApplicationRecord
   has_many :hotels
   has_many :tailgates
   has_many :advices, as: :adviceable
+
+  def alias
+    self.team.parameterize(separator: '_')
+  end
 end

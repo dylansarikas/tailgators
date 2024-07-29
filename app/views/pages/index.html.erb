@@ -1,2 +1,16 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<h1>Welcome to Tailgators!</h1>
+<h3>For all of your football tailgating needs</h3>
+
+<br>
+
+<h5>Top Stadiums</h5>
+<div class="d-flex p-2 justify-content-evenly">
+  <%= render Stadium.find_by(name: "Lambeau Field") %>
+  <%= render Stadium.find_by(name: "Soldier Field") %>
+  <%= render Stadium.find_by(name: "Ford Field") %>
+  <%= render Stadium.find_by(name: "US Bank Stadium") %>
+</div>
+  
+<br>
+
+<h5>Popular Tailgates</h5>

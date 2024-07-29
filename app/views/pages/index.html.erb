@@ -4,13 +4,19 @@
 <br>
 
 <h5>Top Stadiums</h5>
-<div class="d-flex p-2 justify-content-evenly">
-  <%= render Stadium.find_by(name: "Lambeau Field") %>
-  <%= render Stadium.find_by(name: "Soldier Field") %>
-  <%= render Stadium.find_by(name: "Ford Field") %>
-  <%= render Stadium.find_by(name: "US Bank Stadium") %>
+<div class="d-flex p-2 justify-content-evenly flex-wrap">
+  <%= render @gb %>
+  <%= render @chi %>
+  <%= render @det %>
+  <%= render @min %>
 </div>
   
 <br>
 
 <h5>Popular Tailgates</h5>
+<div class="d-flex p-2 justify-content-evenly flex-wrap">
+  <%= render @gb.tailgates.sample %>
+  <%= render @chi.tailgates.sample %>
+  <%= render @det.tailgates.sample %>
+  <%= render @min.tailgates.sample %>
+</div>

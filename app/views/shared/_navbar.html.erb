@@ -18,10 +18,10 @@
             NFC North
           </a>
           <ul class="dropdown-menu">
-            <li><%= link_to "Chicago Bears", stadium_path(1), class: "dropdown-item" %></li>
-            <li><%= link_to "Green Bay Packers", stadium_path(2), class: "dropdown-item" %></li>
-            <li><%= link_to "Detroit Lions", stadium_path(3), class: "dropdown-item" %></li>
-            <li><%= link_to "Minnesota Vikings", stadium_path(4), class: "dropdown-item" %></li>
+            <li><%= link_to "Chicago Bears", stadium_path("Soldier Field"), class: "dropdown-item" %></li>
+            <li><%= link_to "Green Bay Packers", stadium_path("Lambeau Field"), class: "dropdown-item" %></li>
+            <li><%= link_to "Detroit Lions", stadium_path("Ford Field"), class: "dropdown-item" %></li>
+            <li><%= link_to "Minnesota Vikings", stadium_path("US Bank Stadium"), class: "dropdown-item" %></li>
           </ul>
         </li>
         <% if user_signed_in? %>

@@ -4,5 +4,6 @@ class PagesController < ApplicationController
     @chi = Stadium.find_by(name: "Soldier Field")
     @det = Stadium.find_by(name: "Ford Field")
     @min = Stadium.find_by(name: "US Bank Stadium")
+    @nfcn = [@gb, @chi, @det, @min]
   end
 end

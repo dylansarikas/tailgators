@@ -1,22 +1,7 @@
-<div id="<%= dom_id hotel %>">
-  <p>
-    <strong>Name:</strong>
-    <%= hotel.name %>
-  </p>
-
-  <p>
-    <strong>Link:</strong>
-    <%= hotel.link %>
-  </p>
-
-  <p>
-    <strong>Address:</strong>
-    <%= hotel.address %>
-  </p>
-
-  <p>
-    <strong>Stadium:</strong>
-    <%= hotel.stadium_id %>
-  </p>
-
+<div class="card-hotel m-4">
+  <div class="card-hotel-details">
+    <p class="text-hotel-title"><%= hotel.name %></p>
+    <p class="text-hotel-body"><%= hotel.address %></p>
+  </div>
+  <%= link_to 'More info', hotel, class: "card-hotel-button" %>
 </div>

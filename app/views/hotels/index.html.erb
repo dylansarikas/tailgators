@@ -1,10 +1,7 @@
-<h1>Hotels</h1>
+<h1>Hotels for the <%= @stadium_hotel.team %></h1>
 
-<div id="hotels">
+<div class="d-flex justify-content-evenly flex-wrap">
   <% @hotels.each do |hotel| %>
     <%= render hotel %>
-    <p>
-      <%= link_to "Show this hotel", hotel %>
-    </p>
   <% end %>
 </div>

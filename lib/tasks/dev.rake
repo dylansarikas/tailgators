@@ -1,7 +1,7 @@
 unless Rails.env.production?
   namespace :dev do
     desc "Drop, create, migrate, seed database"
-    task hard_reset: [
+    task reset: [
       :environment,
       "db:drop",
       "db:create",

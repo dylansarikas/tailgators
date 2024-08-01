@@ -7,21 +7,17 @@
       <% end %>
     <div>
       <table class="table-tailgate m-2">
-        <thead>
-          <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Location</th>
-            <th scope="col">Link</th>
-          </tr>
-        </thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Location</th>
+          <th scope="col">Link</th>
+        </tr>
         <% stadium.tailgates.each do |tailgate| %>
-          <tbody>
-            <tr>
-              <td> <%= tailgate.name %> </td>
-              <td> <%= tailgate.location %> </td>
-              <td> <%= link_to 'Tailgate page', tailgate %> </td>
-            </tr>
-          </tbody>
+          <tr>
+            <td> <%= tailgate.name %> </td>
+            <td> <%= tailgate.location %> </td>
+            <td> <%= link_to 'Tailgate page', tailgate %> </td>
+          </tr>
         <% end %>
       </table>
     </div>

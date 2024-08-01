@@ -4,11 +4,8 @@
   <% @tailgates.each do |tailgate| %>
     <div>
       <%= render tailgate %>
-      <p>
-        <%= link_to "Show this tailgate", tailgate %>
-      </p>
     </div>
   <% end %>
 </div>
 
-<%= link_to "New tailgate", new_tailgate_path %>
+<%= link_to "New tailgate", new_tailgate_path, class: "btn btn-outline-success m-2"%>

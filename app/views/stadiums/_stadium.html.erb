@@ -2,8 +2,8 @@
   <img src=<%=image_path(stadium.image)%> class="card-img-top" alt=<%= stadium.name %>>
   <div class="card-body">
     <%= link_to stadium_path(stadium.name), class: "card-title" do %>
-        <h5><%= stadium.team %></h5>
-      <% end %>
+      <h5><%= stadium.team %></h5>
+    <% end %>
     <p class="card-text"><%= stadium.name %></p>
   </div>
 </div>

@@ -1,0 +1,39 @@
+.table-tailgate {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-tailgate td, .table-tailgate th {
+  padding: 8px;
+} 
+
+.table-tailgate tr:nth-child(even) {
+  background-color: #000000;
+}
+
+.table-tailgate tr:hover {background-color: #ddd;}
+
+.table-tailgate th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.table-tailgate th:first-of-type {
+  border-top-left-radius: 10px;
+}
+
+.table-tailgate th:last-of-type {
+  border-top-right-radius: 10px;
+}
+
+.table-tailgate tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 10px;
+}
+
+.table-tailgate tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 10px;
+}

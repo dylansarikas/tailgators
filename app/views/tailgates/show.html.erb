@@ -1,4 +1,6 @@
-<%= render @tailgate %>
+<div class="d-flex justify-content-center">
+  <%= render @tailgate %>
+</div>
 
 <div>
   <%= link_to "Edit this Tailgate", edit_tailgate_path(@tailgate), class: "btn btn-outline-success m-1" %>
@@ -27,6 +29,12 @@
   
 </div>
 
-<div>
-  <%= link_to "Back to tailgates", tailgates_path, class: "btn btn-outline-primary m-2" %>
+<div class="d-flex">
+  <div>
+    <%= link_to "Back to all tailgates", tailgates_path, class: "btn btn-outline-primary m-2" %>
+  </div>
+
+  <div>
+    <%= link_to "Back to all #{@tailgate.stadium.team} tailgates", tailgates_by_stadium_path(@tailgate.stadium.name), class: "btn btn-outline-success m-2" %>
+  </div>
 </div>

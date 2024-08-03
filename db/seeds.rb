@@ -17,8 +17,8 @@ Hotel.create(name: "Lighthouse Inn", address: "1515 Memorial Drive Two Rivers, W
 Hotel.create(name: "Country Inn and Suites Elk Grove Village", address: "1160 W Devon Ave, Elk Grove Village, IL 60007", stadium_id: 1)
 
 Tailgate.create(name: "Lambeau Field Lot 1 Tailgate", location: "Lot 1, S Oneida St, Green Bay, WI 54304", stadium_id: 2)
-Tailgate.create(name: "CHGO Sports Bears Tailgate", location: "2200 S Wabash Ave, Chicago, IL, USA", stadium_id: 2)
-Tailgate.create(name: "Detroit Lions Eastern Market Tailgating", location: "Eastern Market 2934 Russell Street 48208", stadium_id: 2)
-Tailgate.create(name: "Vikings Tailgate Garden", location: "425 Portland Ave S, Minneapolis, MN 55415", stadium_id: 2)
+Tailgate.create(name: "CHGO Sports Bears Tailgate", location: "2200 S Wabash Ave, Chicago, IL, USA", stadium_id: 1)
+Tailgate.create(name: "Detroit Lions Eastern Market Tailgating", location: "Eastern Market 2934 Russell Street 48208", stadium_id: 3)
+Tailgate.create(name: "Vikings Tailgate Garden", location: "425 Portland Ave S, Minneapolis, MN 55415", stadium_id: 4)
 
 Advice.create(adviceable_id: 4, adviceable_type: Stadium, body: "Really good food", user_id: 1)

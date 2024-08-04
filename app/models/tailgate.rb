@@ -2,12 +2,13 @@
 #
 # Table name: tailgates
 #
-#  id         :bigint           not null, primary key
-#  location   :string
-#  name       :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  stadium_id :bigint           not null
+#  id          :bigint           not null, primary key
+#  description :text
+#  location    :string
+#  name        :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  stadium_id  :bigint           not null
 #
 # Indexes
 #

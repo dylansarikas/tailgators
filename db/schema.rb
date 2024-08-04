@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_25_161911) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_04_172121) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -32,6 +32,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_25_161911) do
     t.bigint "stadium_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
     t.index ["stadium_id"], name: "index_hotels_on_stadium_id"
   end
 
@@ -43,6 +44,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_25_161911) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
+    t.text "description"
   end
 
   create_table "tailgates", force: :cascade do |t|
@@ -51,6 +53,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_25_161911) do
     t.bigint "stadium_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
     t.index ["stadium_id"], name: "index_tailgates_on_stadium_id"
   end
 

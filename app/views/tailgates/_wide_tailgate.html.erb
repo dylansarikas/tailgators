@@ -1,6 +1,8 @@
 <div class="card text-center">
   <div class="card-header">
-    <%= tailgate.stadium.team %>
+    <%= link_to stadium_path(tailgate.stadium.name), class: "card-title" do %>
+      <h5><%= tailgate.stadium.team %></h5>
+    <% end %>
   </div>
   <div class="card-body">
     <h5 class="card-title"> <%= tailgate.name %> </h5>

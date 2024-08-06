@@ -3,9 +3,9 @@ class HotelsController < ApplicationController
   before_action :set_stadium, only: :index
 
   # GET /hotels or /hotels.json
-  # def index
-  #   @hotels = Hotel.where("stadium_id = #{@stadium_hotel.id}")
-  # end
+  def index
+    @hotels = Hotel.where("stadium_id = #{@stadium_hotel.id}")
+  end
 
   # GET /hotels/1 or /hotels/1.json
   def show

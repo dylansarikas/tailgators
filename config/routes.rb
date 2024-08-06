@@ -16,12 +16,13 @@ Rails.application.routes.draw do
   resources :stadiums, only: [:index]
   resources :tailgates
   resources :advices, except: [:index, :show]
-  
+  resources :hotels, except: [:index, :delete]
+
+  # get "hotels/:name" => "hotels#show", as: :hotel
   get ":name" => "stadiums#show", as: :stadium
-  get ":name/hotels" => "hotels#index", as: :hotels
+  get ":name/hotels" => "hotels#index", as: :hotels_by_stadium
   get ":name/tailgates" => "tailgates#by_stadium", as: :tailgates_by_stadium
 
-  resources :hotels, except: [:index, :delete]
 
   # This is a blank app! Pick your first screen, build out the RCAV, and go from there. E.g.:
 

@@ -3,50 +3,50 @@ class HotelsController < ApplicationController
   before_action :set_stadium, only: :index
 
   # GET /hotels or /hotels.json
-  def index
-    @hotels = Hotel.where("stadium_id = #{@stadium_hotel.id}")
-  end
+  # def index
+  #   @hotels = Hotel.where("stadium_id = #{@stadium_hotel.id}")
+  # end
 
   # GET /hotels/1 or /hotels/1.json
   def show
   end
 
   # GET /hotels/new
-  # def new
-  #   @hotel = Hotel.new
-  # end
+  def new
+    @hotel = Hotel.new
+  end
 
   # GET /hotels/1/edit
-  # def edit
-  # end
+  def edit
+  end
 
   # POST /hotels or /hotels.json
-  # def create
-  #   @hotel = Hotel.new(hotel_params)
+  def create
+    @hotel = Hotel.new(hotel_params)
 
-  #   respond_to do |format|
-  #     if @hotel.save
-  #       format.html { redirect_to hotel_url(@hotel), notice: "Hotel was successfully created." }
-  #       format.json { render :show, status: :created, location: @hotel }
-  #     else
-  #       format.html { render :new, status: :unprocessable_entity }
-  #       format.json { render json: @hotel.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+    respond_to do |format|
+      if @hotel.save
+        format.html { redirect_to hotel_url(@hotel), notice: "Hotel was successfully created." }
+        format.json { render :show, status: :created, location: @hotel }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @hotel.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # PATCH/PUT /hotels/1 or /hotels/1.json
-  # def update
-  #   respond_to do |format|
-  #     if @hotel.update(hotel_params)
-  #       format.html { redirect_to hotel_url(@hotel), notice: "Hotel was successfully updated." }
-  #       format.json { render :show, status: :ok, location: @hotel }
-  #     else
-  #       format.html { render :edit, status: :unprocessable_entity }
-  #       format.json { render json: @hotel.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+  def update
+    respond_to do |format|
+      if @hotel.update(hotel_params)
+        format.html { redirect_to hotel_url(@hotel), notice: "Hotel was successfully updated." }
+        format.json { render :show, status: :ok, location: @hotel }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @hotel.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # DELETE /hotels/1 or /hotels/1.json
   # def destroy

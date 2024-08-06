@@ -1,7 +1,10 @@
 <div class="card">
   <div class="card-body">
     <h5 class="card-title">Location</h5>
-    <p class="card-text"><small class="text-body-secondary">Street Adress</small></p>
+    <!--<p class="card-text"><small class="text-body-secondary">Street Adress</small></p>-->
   </div>
-  <img src="https://maps.googleapis.com/maps/api/staticmap?center=<%=map.latitude%>,<%=map.longitude%>&zoom=13&size=700x150&key=<% Rails.application.credentials.google_maps_key %>" class="card-img-bottom" alt=<%= map.name %>>
+  <img src="https://maps.googleapis.com/maps/api/staticmap?center=<%=map.latitude%>,<%=map.longitude%>&zoom=14&size=700x150&markers=color:red%7Clabel:Hotel%7C<%=map.latitude%>,<%=map.longitude%>&key=<%= Rails.application.credentials.google_maps_key %>" class="card-img-bottom" alt=<%= map.name %>>
 </div>
+
+<%#= Rails.application.credentials.google_maps_key %>
+<!---->

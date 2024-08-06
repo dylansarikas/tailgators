@@ -1,0 +1,9 @@
+
+<div class="d-flex justify-content-center">
+  <div class="card m-4" style="width: 48rem;">
+    <div class="card-body">
+      <h5 class="card-title">Location</h5>
+    </div>
+    <img src="https://maps.googleapis.com/maps/api/staticmap?center=<%=map.address%>&zoom=15&size=1200x150&markers=color:red%7Clabel:Hotel%7C<%=map.address%>&key=<%= Rails.application.credentials.google_maps_key %>" class="card-img-bottom" alt=<%= map.name %>>
+  </div>
+</div>

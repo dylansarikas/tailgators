@@ -1,9 +1,12 @@
 <div class="d-flex justify-content-center">
-  <%= render @tailgate %>
+  <%#= render @tailgate %>
+  <%= render "wide_tailgate", :tailgate => @tailgate %>
 </div>
 
 <div>
-  <%= link_to "Edit this Tailgate", edit_tailgate_path(@tailgate), class: "btn btn-outline-success m-1" %>
+  <%#= link_to "Edit this Tailgate", edit_tailgate_path(@tailgate), class: "btn btn-outline-success m-1" %>
+
+  <%= render "map_card", :map => @tailgate %>
 
   <%#= button_to "Delete Tailgate", @tailgate, class: "btn btn-outline-danger m-1", method: :delete %>
 </div>

@@ -1,12 +1,23 @@
 <%= render "wide_stadium", :stadium => @stadium %>
 
-<%= link_to 'Check out Hotels', hotels_path, class: "btn btn-outline-primary m-2" %>
+<div class="d-flex">
+  <div>
+    <%= link_to 'Check out Hotels', hotels_by_stadium_path, class: "btn btn-outline-primary m-2" %>
+  </div>
 
-<%= link_to 'Check out Tailgates', tailgates_by_stadium_path, class: "btn btn-outline-primary m-2" %>
+  <div>
+    <%= link_to 'Check out Tailgates', tailgates_by_stadium_path, class: "btn btn-outline-primary m-2" %>
+  </div>
+
+  <div class="ms-auto p-2">
+    <%= render "map_card", :map => @stadium %>
+  </div>
+</div>
+
 
 <h3 class="mt-2">Helpful Tips!</h3>
 
-<hr>
+<hr>  
 
 <ul class="list-group list-group-flush">
   <% @stadium.advices.each do |advice| %>

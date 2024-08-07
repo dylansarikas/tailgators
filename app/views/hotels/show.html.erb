@@ -1,6 +1,8 @@
 <div class="d-flex justify-content-center">
-  <%= render @hotel %>
+  <%= render "wide_hotel", :hotel => @hotel %>
 </div>
+
+<%= render "map_card", :map => @hotel %>
 
 <h3 class="mt-2">Helpful Tips!</h3>
 

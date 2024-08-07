@@ -6,8 +6,7 @@ unless Rails.env.production?
       "db:drop",
       "db:create",
       "db:migrate",
-      "db:seed",
-      "dev:sample_data"] do
+      "db:seed"] do
       puts "Reset environment"
     end
 

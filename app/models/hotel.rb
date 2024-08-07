@@ -2,13 +2,14 @@
 #
 # Table name: hotels
 #
-#  id         :bigint           not null, primary key
-#  address    :string
-#  link       :string
-#  name       :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  stadium_id :bigint           not null
+#  id          :bigint           not null, primary key
+#  address     :string
+#  description :text
+#  link        :string
+#  name        :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  stadium_id  :bigint           not null
 #
 # Indexes
 #

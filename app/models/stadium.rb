@@ -2,15 +2,14 @@
 #
 # Table name: stadiums
 #
-#  id          :bigint           not null, primary key
-#  description :text
-#  image       :string
-#  latitude    :string
-#  longitude   :string
-#  name        :string
-#  team        :string
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id         :bigint           not null, primary key
+#  image      :string
+#  latitude   :string
+#  longitude  :string
+#  name       :string
+#  team       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 class Stadium < ApplicationRecord
   validates :latitude, :longitude, :name, :team, presence: true

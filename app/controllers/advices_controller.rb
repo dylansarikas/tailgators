@@ -2,13 +2,13 @@ class AdvicesController < ApplicationController
   before_action :set_advice, only: %i[ show edit update destroy ]
 
   # GET /advices or /advices.json
-  # def index
-  #   @advices = Advice.all
-  # end
+  def index
+    @advices = Advice.all
+  end
 
   # GET /advices/1 or /advices/1.json
-  # def show
-  # end
+  def show
+  end
 
   # GET /advices/new
   def new

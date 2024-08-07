@@ -1,6 +1,7 @@
 class HotelsController < ApplicationController
-  before_action :set_hotel, only: %i[ show edit update ]
+  before_action :set_hotel_name, only: %i[ show edit ]
   before_action :set_stadium, only: :index
+  before_action :set_hotel_id, only: :update
 
   # GET /hotels or /hotels.json
   def index
@@ -39,7 +40,7 @@ class HotelsController < ApplicationController
   def update
     respond_to do |format|
       if @hotel.update(hotel_params)
-        format.html { redirect_to hotel_url(@hotel), notice: "Hotel was successfully updated." }
+        format.html { redirect_to hotel_by_stadium_url(@hotel.name), notice: "Hotel was successfully updated." }
         format.json { render :show, status: :ok, location: @hotel }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -60,8 +61,12 @@ class HotelsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_hotel
+    def set_hotel_name
       @hotel = Hotel.find_by(name: params[:name])
+    end
+
+    def set_hotel_id
+      @hotel = Hotel.find(params[:id])
     end
 
     def set_stadium
@@ -70,6 +75,6 @@ class HotelsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def hotel_params
-      params.require(:hotel).permit(:name, :link, :address, :stadium_id)
+      params.require(:hotel).permit(:name, :link, :address, :stadium_id, :description)
     end
 end

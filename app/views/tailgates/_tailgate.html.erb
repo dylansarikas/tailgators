@@ -22,11 +22,11 @@
 </div>-->
 
 <div class="card border-dark mb-3" style="max-width: 18rem;">
-  <%= link_to tailgate_by_stadium_path(tailgate.name), class: "card-header" do %>
+  <%= link_to tailgate_path(tailgate.id), class: "card-header" do %>
     <%= tailgate.name %>
   <% end %>
   <div class="card-body">
     <h5 class="card-title"><%= tailgate.location %></h5>
-    <p class="card-text"><%= tailgate.description %></p>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>

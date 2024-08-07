@@ -1,5 +1,5 @@
 class TailgatesController < ApplicationController
-  before_action :set_tailgate, only: %i[ edit update destroy ]
+  before_action :set_tailgate, only: %i[ show edit update destroy ]
   before_action :set_stadium, only: :by_stadium
 
   # GET /tailgates or /tailgates.json
@@ -10,7 +10,6 @@ class TailgatesController < ApplicationController
 
   # GET /tailgates/1 or /tailgates/1.json
   def show
-    @tailgate = Tailgate.find_by(name: params[:name])
   end
 
   # GET /tailgates/new

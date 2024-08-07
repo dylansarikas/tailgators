@@ -3,8 +3,5 @@
     <p class="text-hotel-title"><%= hotel.name %></p>
     <p class="text-hotel-body"><%= hotel.address %></p>
   </div>
-  <%#= link_to 'More info', hotel, class: "card-hotel-button" %>
-  <%= link_to hotel_by_stadium_path(hotel.name), class: "card-hotel-button" do %>
-    More info
-  <% end %>
+  <%= link_to 'More info', hotel, class: "card-hotel-button" %>
 </div>

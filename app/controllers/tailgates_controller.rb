@@ -1,6 +1,7 @@
 class TailgatesController < ApplicationController
-  before_action :set_tailgate, only: %i[ edit update destroy ]
+  before_action :set_tailgate_name, only: %i[ show edit destroy ]
   before_action :set_stadium, only: :by_stadium
+  before_action :set_tailgate_id, only: :update
 
   # GET /tailgates or /tailgates.json
   def index
@@ -10,7 +11,6 @@ class TailgatesController < ApplicationController
 
   # GET /tailgates/1 or /tailgates/1.json
   def show
-    @tailgate = Tailgate.find_by(name: params[:name])
   end
 
   # GET /tailgates/new
@@ -41,7 +41,7 @@ class TailgatesController < ApplicationController
   def update
     respond_to do |format|
       if @tailgate.update(tailgate_params)
-        format.html { redirect_to tailgate_url(@tailgate), notice: "Tailgate was successfully updated." }
+        format.html { redirect_to tailgate_by_stadium_url(@tailgate.name), notice: "Tailgate was successfully updated." }
         format.json { render :show, status: :ok, location: @tailgate }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -67,8 +67,12 @@ class TailgatesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_tailgate
+    def set_tailgate_id
       @tailgate = Tailgate.find(params[:id])
+    end
+
+    def set_tailgate_name
+      @tailgate = Tailgate.find_by(name: params[:name])
     end
 
     def set_stadium
@@ -77,6 +81,6 @@ class TailgatesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tailgate_params
-      params.require(:tailgate).permit(:location, :name, :stadium_id)
+      params.require(:tailgate).permit(:location, :name, :stadium_id, :description, :link)
     end
 end

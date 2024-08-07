@@ -14,9 +14,10 @@ Rails.application.routes.draw do
   # resources :hotels, only: [:show]
   # resources :stadiums, only: [:index, :show]
   resources :stadiums, only: [:index]
-  resources :tailgates, except: [:show]
+  resources :tailgates, except: [:show, :edit]
   resources :advices, except: [:index, :show]
   resources :hotels, only: [:new, :edit, :create, :update]
+
 
   # get "hotels/:name" => "hotels#show", as: :hotel
   # Could do nested routes for hotels and tailgates
@@ -25,7 +26,7 @@ Rails.application.routes.draw do
   get ":name/tailgates" => "tailgates#by_stadium", as: :tailgates_by_stadium
   get "/hotels/:name" => "hotels#show", as: :hotel_by_stadium
   get "/tailgates/:name" => "tailgates#show", as: :tailgate_by_stadium
-
+  get "/tailgates/:name/edit" => "tailgates#edit", as: :edit_tailgate
 
   # This is a blank app! Pick your first screen, build out the RCAV, and go from there. E.g.:
 

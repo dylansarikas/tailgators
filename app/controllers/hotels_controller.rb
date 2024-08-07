@@ -1,5 +1,5 @@
 class HotelsController < ApplicationController
-  before_action :set_hotel, only: :show
+  before_action :set_hotel, only: %i[ show edit update ]
   before_action :set_stadium, only: :index
 
   # GET /hotels or /hotels.json
@@ -61,7 +61,7 @@ class HotelsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_hotel
-      @hotel = Hotel.find(params[:id])
+      @hotel = Hotel.find_by(name: params[:name])
     end
 
     def set_stadium

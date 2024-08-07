@@ -16,7 +16,11 @@
           <tr>
             <td> <%= tailgate.name %> </td>
             <td> <%= tailgate.location %> </td>
-            <td> <%= link_to 'Tailgate page', tailgate %> </td>
+            <td>
+              <%= link_to tailgate_by_stadium_path(tailgate.name), class: "card-header" do %>
+                Tailgate page
+              <% end %>
+            </td>
           </tr>
         <% end %>
       </table>

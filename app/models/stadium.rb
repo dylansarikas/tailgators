@@ -18,6 +18,7 @@ class Stadium < ApplicationRecord
   
   has_many :hotels
   has_many :tailgates
+  has_many :lots
   has_many :advices, as: :adviceable
 
   def alias

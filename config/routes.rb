@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :tailgates, except: [:show, :edit]
   resources :advices, except: [:index, :show]
   resources :hotels, only: [:new, :create, :update]
+  resources :lots, except: [:index, :delete]
 
 
   # get "hotels/:name" => "hotels#show", as: :hotel

@@ -32,21 +32,12 @@
 
   <br>
 
-  <!--<div>-->
-    <%#= form.label :stadium_id, style: "display: block" %>
-    <%#= form.text_field :stadium_id, class: "form-control" %>
-<!--  </div>-->
-
   <div>
     <%= form.label :stadium_id, style: "display: block" %>
     <%= collection_select(:hotel, :stadium_id, Stadium.all, :id, :team, class: "form-select")%>
   </div>
 
   <br>
-
-  <%#= collection_select(:person, :city_id, City.all, :id, :name) %>
-  <%#= collection_select(:hotel, :stadium_id, Stadium.all, :id, :team) %>
-
 
   <div>
     <%= form.label :description, style: "display: block" %>

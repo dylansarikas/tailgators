@@ -16,25 +16,35 @@
     <%= form.text_field :location, class: "form-control" %>
   </div>
 
+  <br>
+
   <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name, class: "form-control" %>
   </div>
 
+  <br>
+
   <div>
     <%= form.label :stadium_id, style: "display: block" %>
-    <%= form.text_field :stadium_id, class: "form-control" %>
+    <%= collection_select(:tailgate, :stadium_id, Stadium.all, :id, :team, class: "form-select")%>
   </div>
+
+  <br>
 
   <div>
     <%= form.label :link, style: "display: block" %>
     <%= form.text_field :link, class: "form-control" %>
   </div>
 
+  <br>
+
   <div>
     <%= form.label :description, style: "display: block" %>
     <%= form.text_area :description, class: "form-control" %>
   </div>
+
+  <br>
 
   <div>
     <%= form.submit %>

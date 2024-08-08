@@ -16,25 +16,44 @@
     <%= form.text_field :name, class: "form-control" %>
   </div>
 
+  <br>
+
   <div>
     <%= form.label :link, style: "display: block" %>
     <%= form.text_field :link, class: "form-control" %>
   </div>
+
+  <br>
 
   <div>
     <%= form.label :address, style: "display: block" %>
     <%= form.text_field :address, class: "form-control" %>
   </div>
 
+  <br>
+
+  <!--<div>-->
+    <%#= form.label :stadium_id, style: "display: block" %>
+    <%#= form.text_field :stadium_id, class: "form-control" %>
+<!--  </div>-->
+
   <div>
     <%= form.label :stadium_id, style: "display: block" %>
-    <%= form.text_field :stadium_id, class: "form-control" %>
+    <%= collection_select(:hotel, :stadium_id, Stadium.all, :id, :team, class: "form-select")%>
   </div>
+
+  <br>
+
+  <%#= collection_select(:person, :city_id, City.all, :id, :name) %>
+  <%#= collection_select(:hotel, :stadium_id, Stadium.all, :id, :team) %>
+
 
   <div>
     <%= form.label :description, style: "display: block" %>
     <%= form.text_area :description, class: "form-control" %>
   </div>
+
+  <br>
 
   <div>
     <%= form.submit %>

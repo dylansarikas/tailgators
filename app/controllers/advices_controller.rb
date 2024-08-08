@@ -54,7 +54,7 @@ class AdvicesController < ApplicationController
     @advice.destroy!
 
     respond_to do |format|
-      format.html { redirect_to advices_url, notice: "Advice was successfully destroyed." }
+      format.html { redirect_back_or_to root_url, notice: "Advice was successfully destroyed." }
       format.json { head :no_content }
     end
   end

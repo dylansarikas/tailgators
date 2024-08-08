@@ -24,11 +24,26 @@
             <path stroke-width="2" fill="#707277" stroke="#707277" d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z"></path>
           </svg>
         </div>
-        <div class="user-info">
-          <span><%= advice.user.username %></span>
-          <p><%= advice.created_at %></p>
+        <div class="d-flex">
+          <div class="user-info">
+            <span><%= advice.user.username %></span>
+            <p><%= advice.created_at %></p>
+          </div>
+          <% if advice.user == current_user %>
+            <div>
+              <%= link_to edit_advice_path(advice), class: "btn btn-link btn-sm text-muted" do %>
+                <i class="fa-solid fa-pen-to-square"></i>
+              <% end %>
+            </div>
+            <div>
+              <%= link_to advice, data: { turbo_method: :delete }, class: "btn btn-link btn-sm text-muted" do %>
+                <i class="fa-solid fa-trash"></i>
+              <% end %>
+            </div>
+          <% end %>
         </div>
       </div>
+        
       <p class="comment-content">
         <%= advice.body %>
       </p>

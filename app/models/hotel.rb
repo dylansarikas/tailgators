@@ -21,6 +21,7 @@
 #
 class Hotel < ApplicationRecord
   validates :name, :address, :stadium_id, presence: true
+  validates :name, uniqueness: true
 
   belongs_to :stadium
   has_many :advices, as: :adviceable

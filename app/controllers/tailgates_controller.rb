@@ -28,7 +28,7 @@ class TailgatesController < ApplicationController
 
     respond_to do |format|
       if @tailgate.save
-        format.html { redirect_to tailgate_url(@tailgate), notice: "Tailgate was successfully created." }
+        format.html { redirect_to tailgate_by_stadium_url(@tailgate.name), notice: "Tailgate was successfully created." }
         format.json { render :show, status: :created, location: @tailgate }
       else
         format.html { render :new, status: :unprocessable_entity }

@@ -29,13 +29,18 @@
             <span><%= advice.user.username %></span>
             <p><%= advice.created_at %></p>
           </div>
-          <div>
-            <% if advice.user == current_user %>
+          <% if advice.user == current_user %>
+            <div>
               <%= link_to edit_advice_path(advice), class: "btn btn-link btn-sm text-muted" do %>
                 <i class="fa-solid fa-pen-to-square"></i>
               <% end %>
-            <% end %>
-          </div>
+            </div>
+            <div>
+              <%= link_to advice, data: { turbo_method: :delete }, class: "btn btn-link btn-sm text-muted" do %>
+                <i class="fa-solid fa-trash"></i>
+              <% end %>
+            </div>
+          <% end %>
         </div>
       </div>
         

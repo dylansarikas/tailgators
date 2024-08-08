@@ -4,11 +4,6 @@ Rails.application.routes.draw do
   root "pages#index"
   
   devise_for :users
-
-  # why is this necessary REEEEEEEEEE
-  devise_scope :user do  
-    get '/users/sign_out' => 'devise/sessions#destroy'     
-  end
   
   resources :stadiums, only: [:index]
   resources :tailgates, except: [:show, :edit]

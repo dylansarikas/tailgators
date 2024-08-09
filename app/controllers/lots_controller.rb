@@ -1,9 +1,10 @@
 class LotsController < ApplicationController
   before_action :set_lot, only: %i[ show edit update destroy ]
+  before_action :set_stadium, only: :index
 
   # GET /lots or /lots.json
   def index
-    @lots = Lot.all
+    @lots = Lot.where("stadium_id = #{@stadium_lot.id}")
   end
 
   # GET /lots/1 or /lots/1.json
@@ -61,6 +62,10 @@ class LotsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_lot
       @lot = Lot.find(params[:id])
+    end
+
+    def set_stadium
+      @stadium_lot = Stadium.find_by(name: params[:name])
     end
 
     # Only allow a list of trusted parameters through.

@@ -24,4 +24,6 @@ Rails.application.routes.draw do
   get ":name/tailgates" => "tailgates#by_stadium", as: :tailgates_by_stadium
   get "/tailgates/:name" => "tailgates#show", as: :tailgate_by_stadium
   get "/tailgates/:name/edit" => "tailgates#edit", as: :edit_tailgate
+
+  get ":name/lots" => "lots#index", as: :lots_by_stadium
 end

@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   resources :advices, except: [:index, :show]
   resources :hotels, only: [:new, :create, :update]
   resources :lots, except: [:index, :delete, :show]
-
+  resources :restaurants
+  
 
   # get "hotels/:name" => "hotels#show", as: :hotel
   # Could do nested routes for hotels and tailgates

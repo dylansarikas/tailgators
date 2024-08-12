@@ -1,27 +1,9 @@
-<div id="<%= dom_id lot %>">
-  <p>
-    <strong>Address:</strong>
-    <%= lot.address %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= lot.description %>
-  </p>
-
-  <p>
-    <strong>Name:</strong>
+<div class="card border-dark mb-3" style="max-width: 18rem;">
+  <%= link_to lot_by_stadium_path(lot.name), class: "card-header" do %>
     <%= lot.name %>
-  </p>
-
-  <p>
-    <strong>Link:</strong>
-    <%= lot.link %>
-  </p>
-
-  <p>
-    <strong>Stadium:</strong>
-    <%= lot.stadium_id %>
-  </p>
-
+  <% end %>
+  <div class="card-body">
+    <h5 class="card-title"><%= lot.address %></h5>
+    <p class="card-text"><%= lot.description %></p>
+  </div>
 </div>

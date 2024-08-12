@@ -1,5 +1,6 @@
 class LotsController < ApplicationController
-  before_action :set_lot, only: %i[ show edit update destroy ]
+  before_action :set_lot_id, only: %i[ update destroy ]
+  before_action :set_lot_name, only: %i[ show edit ]
   before_action :set_stadium, only: :index
 
   # GET /lots or /lots.json
@@ -60,8 +61,12 @@ class LotsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_lot
+    def set_lot_id
       @lot = Lot.find(params[:id])
+    end
+
+    def set_lot_name
+      @lot = Lot.find_by(name: params[:name])
     end
 
     def set_stadium

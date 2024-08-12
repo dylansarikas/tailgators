@@ -1,0 +1,15 @@
+<div class="card text-center">
+  <div class="card-header">
+    <%= link_to stadium_path(restaurant.stadium.name), class: "card-title" do %>
+      <h5><%= restaurant.stadium.team %></h5>
+    <% end %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= restaurant.name %></h5>
+    <p class="card-text"><%= restaurant.description %></p>
+    <a href="<%= restaurant.link %>" target="_blank" class="btn btn-primary">Restaurant Link</a>
+  </div>
+  <div class="card-footer text-body-secondary">
+    <%= restaurant.address %>
+  </div>
+</div>

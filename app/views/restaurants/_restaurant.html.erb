@@ -1,0 +1,9 @@
+<div class="card border-dark mb-3" style="max-width: 18rem;">
+  <%= link_to restaurant_by_stadium_path(restaurant.name), class: "card-header" do %>
+    <%= restaurant.name %>
+  <% end %>
+  <div class="card-body">
+    <h5 class="card-title"><%= restaurant.address %></h5>
+    <p class="card-text"><%= restaurant.description %></p>
+  </div>
+</div>

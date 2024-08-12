@@ -1,6 +1,8 @@
 <div class="card text-center">
   <div class="card-header">
-    <%= lot.stadium.team %>
+    <%= link_to stadium_path(lot.stadium.name), class: "card-title" do %>
+      <h5><%= lot.stadium.team %></h5>
+    <% end %>
   </div>
   <div class="card-body">
     <h5 class="card-title"><%= lot.name %></h5>

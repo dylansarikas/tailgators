@@ -1,5 +1,6 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant_id, only: %i[ show edit update destroy ]
+  before_action :set_restaurant_id, only: %i[ update destroy ]
+  before_action :set_restaurant_name, only: %i[ show edit ]
   before_action :set_stadium, only: :index
 
   # GET /restaurants or /restaurants.json
@@ -62,6 +63,10 @@ class RestaurantsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_restaurant_id
       @restaurant = Restaurant.find(params[:id])
+    end
+
+    def set_restaurant_name
+      @restaurant = Restaurant.find_by(name: params[:name])
     end
 
     # Only allow a list of trusted parameters through.

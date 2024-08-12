@@ -30,4 +30,5 @@ Rails.application.routes.draw do
   get "lots/:name" => "lots#show", as: :lot_by_stadium
 
   get ":name/restaurants" => "restaurants#index", as: :restaurants_by_stadium
+  get "restaurants/:name" => "restaurants#show", as: :restaurant_by_stadium
 end

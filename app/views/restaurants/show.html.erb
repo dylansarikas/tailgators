@@ -1,10 +1,26 @@
-<p style="color: green"><%= notice %></p>
+<div class="d-flex justify-content-center">
+  <%= render "wide_restaurant", :restaurant => @restaurant %>
+</div>
 
-<%= render @restaurant %>
+<h3 class="mt-2">Helpful Tips!</h3>
+
+<hr>
+
+<ul class="list-group list-group-flush">
+  <% @restaurant.advices.each do |advice| %>
+    <li class="list-group-item">
+      <%= render advice %>
+    </li>
+  <% end %>
+</ul>
+
+<div  class="card-body">
+  <% if current_user %>
+    <%= render "advices/form", advice: Advice.new(adviceable_id: @restaurant.id, adviceable_type: @restaurant.class, user_id: current_user.id) %>
+  <% end %>
+  
+</div>
 
 <div>
-  <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
-  <%= link_to "Back to restaurants", restaurants_path %>
-
-  <%= button_to "Destroy this restaurant", @restaurant, method: :delete %>
+  <%= link_to "Back to #{@restaurant.stadium.team} restaurants", restaurants_path(@restaurant.stadium.name), class: "btn btn-outline-primary m-2" %>
 </div>

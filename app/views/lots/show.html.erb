@@ -1,3 +1,26 @@
 <div class="d-flex justify-content-center">
   <%= render "wide_lot", :lot => @lot %>
 </div>
+
+<h3 class="mt-2">Helpful Tips!</h3>
+
+<hr>
+
+<ul class="list-group list-group-flush">
+  <% @lot.advices.each do |advice| %>
+    <li class="list-group-item">
+      <%= render advice %>
+    </li>
+  <% end %>
+</ul>
+
+<div  class="card-body">
+  <% if current_user %>
+    <%= render "advices/form", advice: Advice.new(adviceable_id: @lot.id, adviceable_type: @lot.class, user_id: current_user.id) %>
+  <% end %>
+  
+</div>
+
+<div>
+  <%= link_to "Back to #{@lot.stadium.team} lots", lots_path(@lot.stadium.name), class: "btn btn-outline-primary m-2" %>
+</div>

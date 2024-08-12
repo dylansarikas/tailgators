@@ -20,7 +20,7 @@
 #  fk_rails_...  (stadium_id => stadiums.id)
 #
 class Lot < ApplicationRecord
-  validates :name, :address, :stadium_id, presence: true
+  validates :name, :stadium_id, presence: true
 
   belongs_to :stadium
   has_many :advices, as: :adviceable

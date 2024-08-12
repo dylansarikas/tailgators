@@ -17,7 +17,6 @@
 </ul>
 
 <div  class="card-body">
-  <!--i dont understand why stadium.advice.build doesnt work-->
   <% if current_user %>
     <%= render "advices/form", advice: Advice.new(adviceable_id: @hotel.id, adviceable_type: @hotel.class, user_id: current_user.id) %>
   <% end %>

@@ -1,0 +1,9 @@
+<div class="card border-dark mb-3" style="max-width: 18rem;">
+  <%= link_to lot_by_stadium_path(lot.name), class: "card-header" do %>
+    <%= lot.name %>
+  <% end %>
+  <div class="card-body">
+    <h5 class="card-title"><%= lot.address %></h5>
+    <p class="card-text"><%= lot.description %></p>
+  </div>
+</div>

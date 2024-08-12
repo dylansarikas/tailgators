@@ -34,7 +34,7 @@
 
   <div>
     <%= form.label :stadium_id, style: "display: block" %>
-    <%= collection_select(:hotel, :stadium_id, Stadium.all, :id, :team, class: "form-select")%>
+    <%= form.collection_select :stadium_id, Stadium.all, :id, :team, {}, { class: "form-select" } %>
   </div>
 
   <br>

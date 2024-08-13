@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  before_action :set_like, only: :delete
+  before_action :set_like, only: :destroy
 
   def new
     @like = Like.new

@@ -67,6 +67,6 @@ class AdvicesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def advice_params
-      params.require(:advice).permit(:user_id, :body, :adviceable_id, :adviceable_type)
+      params.require(:advice).permit(:user_id, :body, :adviceable_id, :adviceable_type, :likes_count)
     end
 end

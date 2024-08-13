@@ -6,4 +6,16 @@ class PagesController < ApplicationController
     @min = Stadium.find_by(name: "US Bank Stadium")
     @nfcn = [@gb, @chi, @det, @min]
   end
+
+  def features
+
+  end
+
+  def faq
+
+  end
+
+  def about
+
+  end
 end

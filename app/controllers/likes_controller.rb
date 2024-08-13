@@ -21,15 +21,15 @@ class LikesController < ApplicationController
 
   def destroy
     @like.destroy
-    rrespond_to do |format|
-      format.html { redirect_to likes_url, notice: "Like was successfully destroyed." }
+    respond_to do |format|
+      format.html { redirect_back_or_to root_url, notice: "Like was successfully destroyed." }
       format.json { head :no_content }
     end
   end
 
   private
     def set_like
-      @like = Liked.find(params[:id])
+      @like = Like.find(params[:id])
     end
 
     def like_params

@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  
-  # root "stadiums#index"
   root "pages#index"
   
   devise_for :users
@@ -11,6 +9,7 @@ Rails.application.routes.draw do
   resources :hotels, only: [:new, :create, :update]
   resources :lots, except: [:index, :delete, :show]
   resources :restaurants, except: [:index, :delete, :show]
+  resources :likes, only: [:create, :destroy]
   
 
   # get "hotels/:name" => "hotels#show", as: :hotel

@@ -1,0 +1,9 @@
+<%= form_with(model: like, class: "d-inline-block") do |form| %>
+  <%= form.hidden_field :fan_id %>
+
+  <%= form.hidden_field :advice_id %>
+
+  <%= form.button class: "btn btn-link link-underline link-underline-opacity-0 link-underline-opacity-100-hover" do %>
+    <i class="far fa-heart fa-fw"></i>
+  <% end %>
+<% end %>

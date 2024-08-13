@@ -24,4 +24,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :advices
+  has_many :likes, foreign_key: :fan_id
+
+  has_many :liked_advices, through: :likes, source: :advice
 end

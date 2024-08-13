@@ -1,0 +1,17 @@
+<% like = current_user.likes.find_by(advice_id: advice) %>
+
+<div>
+  <% if like %>
+    <%= link_to like, lass: "btn btn-link link-underline-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover", data: { "turbo-method": :delete } do %>
+      <i class="fas fa-heart fa-fw"></i>
+    <% end %>
+  <% else %>
+    <%= render "likes/form", like: advice.likes.build(fan: current_user) %>
+  <% end %>
+</div>
+
+<hr>
+
+<div>
+  <span><%= advice.likes_count %></span>
+</div>

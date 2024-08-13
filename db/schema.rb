@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_12_201223) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_13_150120) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_12_201223) do
     t.bigint "adviceable_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "likes_count", default: 0
     t.index ["adviceable_type", "adviceable_id"], name: "index_advices_on_adviceable"
     t.index ["user_id"], name: "index_advices_on_user_id"
   end
@@ -34,6 +35,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_12_201223) do
     t.datetime "updated_at", null: false
     t.text "description"
     t.index ["stadium_id"], name: "index_hotels_on_stadium_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.bigint "fan_id", null: false
+    t.bigint "advice_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["advice_id"], name: "index_likes_on_advice_id"
+    t.index ["fan_id"], name: "index_likes_on_fan_id"
   end
 
   create_table "lots", force: :cascade do |t|
@@ -95,6 +105,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_12_201223) do
 
   add_foreign_key "advices", "users"
   add_foreign_key "hotels", "stadiums"
+  add_foreign_key "likes", "advices"
+  add_foreign_key "likes", "users", column: "fan_id"
   add_foreign_key "lots", "stadiums"
   add_foreign_key "restaurants", "stadiums"
   add_foreign_key "tailgates", "stadiums"

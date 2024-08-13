@@ -5,6 +5,7 @@
 #  id              :bigint           not null, primary key
 #  adviceable_type :string           not null
 #  body            :text
+#  likes_count     :integer          default(0)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  adviceable_id   :bigint           not null

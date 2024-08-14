@@ -41,3 +41,19 @@
 .table-tailgate tr:last-of-type td:last-of-type {
   border-bottom-right-radius: 10px;
 }
+
+.bears th{
+  background-color: #0B162A;
+}
+
+.packers th{
+  background-color: #203731;
+}
+
+.lions th{
+  background-color: #0076b6;
+}
+
+.vikings th{
+  background-color: #4F2683;
+}

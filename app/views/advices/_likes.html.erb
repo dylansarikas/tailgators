@@ -1,4 +1,8 @@
-<% like = current_user.likes.find_by(advice_id: advice) %>
+<!--pundit this-->
+
+<% if current_user %>
+  <% like = current_user.likes.find_by(advice_id: advice) %>
+<% end %>
 
 <div>
   <% if like %>

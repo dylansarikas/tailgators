@@ -2,7 +2,7 @@
 
 <br>
 
-<div class="d-flex-reverse">
+<div class="d-flex-reverse p-2">
   <% @stadiums.each do |stadium| %>
     <%= link_to stadium_path(stadium.name), class: "table-link-name" do %>
         <h2><%= stadium.name %></h2>

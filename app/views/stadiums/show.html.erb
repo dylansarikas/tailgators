@@ -1,21 +1,21 @@
 <%= render "wide_stadium", :stadium => @stadium %>
 
-<div class="d-flex flex-column">
+<div class="d-flex flex-column align-items-center">
   <div class="d-flex flex-wrap">
     <div>
-      <%= link_to 'Check out Hotels', hotels_by_stadium_path, class: "btn btn-outline-primary m-2" %>
+      <%= link_to 'Check out Hotels', hotels_by_stadium_path, class: "btn m-2 btn-"+@stadium.nick_name %>
     </div>
 
     <div>
-      <%= link_to 'Check out Tailgates', tailgates_by_stadium_path, class: "btn btn-outline-primary m-2" %>
+      <%= link_to 'Check out Tailgates', tailgates_by_stadium_path, class: "btn m-2 btn-"+@stadium.nick_name %>
     </div>
 
     <div>
-      <%= link_to 'Check out Restaurants', restaurants_by_stadium_path, class: "btn btn-outline-primary m-2" %>
+      <%= link_to 'Check out Restaurants', restaurants_by_stadium_path, class: "btn m-2 btn-"+@stadium.nick_name %>
     </div>
     
     <div>
-      <%= link_to 'Check out Parking', lots_by_stadium_path, class: "btn btn-outline-primary m-2" %>
+      <%= link_to 'Check out Parking', lots_by_stadium_path, class: "btn m-2 btn-"+@stadium.nick_name %>
     </div>
   </div>
 

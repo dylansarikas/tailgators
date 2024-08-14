@@ -42,18 +42,22 @@
   border-bottom-right-radius: 10px;
 }
 
-.bears th{
+.bears-row th{
   background-color: #0B162A;
 }
 
-.packers th{
+.packers-row th{
   background-color: #203731;
 }
 
-.lions th{
+.lions-row th{
   background-color: #0076b6;
 }
 
-.vikings th{
+.vikings-row th{
   background-color: #4F2683;
+}
+
+.table-link-name{
+  color: black;
 }

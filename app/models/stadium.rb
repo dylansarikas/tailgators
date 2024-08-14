@@ -8,6 +8,7 @@
 #  latitude    :string
 #  longitude   :string
 #  name        :string
+#  nick_name   :string
 #  team        :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null

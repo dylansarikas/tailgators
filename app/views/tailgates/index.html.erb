@@ -1,12 +1,14 @@
 <h1>Tailgates</h1>
 
+<br>
+
 <div class="d-flex-reverse">
   <% @stadiums.each do |stadium| %>
-    <%= link_to stadium_path(stadium.name) do %>
+    <%= link_to stadium_path(stadium.name), class: "table-link-name" do %>
         <h2><%= stadium.name %></h2>
       <% end %>
     <div>
-      <table class="table-tailgate m-2">
+      <table class="table-tailgate m-2 <%=stadium.nick_name%>-row">
         <tr>
           <th scope="col">Name</th>
           <th scope="col">Location</th>
@@ -25,6 +27,7 @@
         <% end %>
       </table>
     </div>
+    <br>
   <% end %>
 </div>
 

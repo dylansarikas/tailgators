@@ -5,6 +5,9 @@
 ## Description
 - This is a web app built in Rails about travelling to a new stadium.  When travelling to a new stadium for sporting events, there is a lot of information travellers would like to know about such as parking, hotels, restaurants, transportation, and tailgating.
 
+## Github Project
+- [Link](https://github.com/dylansarikas/tailgators)
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)

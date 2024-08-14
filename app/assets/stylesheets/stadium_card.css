@@ -1,0 +1,43 @@
+.card-stadium {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.card-stadium:hover {
+  transform: translateY(-5px);
+}
+
+.card-stadium-img {
+  width: 100%;
+  height: auto;
+}
+
+.card-stadium-content {
+  padding: 15px;
+}
+
+.card-stadium-title {
+  font-size: 1.5em;
+  margin: 0;
+  color: black;
+}
+
+.card-stadium-text {
+  margin: 10px 0;
+  color: #555;
+}
+
+.card-stadium-button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.card-stadium-button:hover {
+  background-color: #0056b3;
+}

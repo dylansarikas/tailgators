@@ -1,8 +1,10 @@
 <h1>Hotels for the <%= @stadium_hotel.team %></h1>
 
-<div class="d-flex justify-content-evenly flex-wrap">
+<div class="d-flex p-2 justify-content-around flex-wrap">
   <% @hotels.each do |hotel| %>
-    <%= render hotel %>
+    <div class="m-3">
+      <%= render hotel %>
+    </div>
   <% end %>
 </div>
 

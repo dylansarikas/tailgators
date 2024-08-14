@@ -1,10 +1,9 @@
-<div class="card-hotel m-4">
-  <div class="card-hotel-details">
-    <p class="text-hotel-title"><%= hotel.name %></p>
-    <p class="text-hotel-body"><%= hotel.address %></p>
-  </div>
-  <%#= link_to 'More info', hotel, class: "card-hotel-button" %>
-  <%= link_to hotel_by_stadium_path(hotel.name), class: "card-hotel-button" do %>
-    More info
+<div class="card card-generic border-dark mb-3 h-100" style="max-width: 18rem;">
+  <%= link_to hotel_by_stadium_path(hotel.name), class: "card-header" do %>
+    <%= hotel.name %>
   <% end %>
+  <div class="card-body">
+    <h5 class="card-title"><%= hotel.address %></h5>
+    <p class="card-text"><%= hotel.description %></p>
+  </div>
 </div>

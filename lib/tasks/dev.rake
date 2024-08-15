@@ -81,3 +81,15 @@ unless Rails.env.production?
 
   end
 end
+
+namespace :run_once do
+  desc "Drop, create, migrate, seed database"
+  task reset: [
+    :environment,
+    "db:drop",
+    "db:create",
+    "db:migrate",
+    "db:seed"] do
+    puts "Reset environment"
+  end
+end

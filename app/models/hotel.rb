@@ -24,5 +24,5 @@ class Hotel < ApplicationRecord
   validates :name, uniqueness: true
 
   belongs_to :stadium
-  has_many :advices, as: :adviceable
+  has_many :advices, as: :adviceable, dependent: :delete_all
 end

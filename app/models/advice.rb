@@ -26,7 +26,7 @@ class Advice < ApplicationRecord
   belongs_to :user
   belongs_to :adviceable, polymorphic: true
 
-  has_many :likes
+  has_many :likes, dependent: :delete_all
 
   has_many :fans, through: :likes
 

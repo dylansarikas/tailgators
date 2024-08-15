@@ -21,6 +21,8 @@
   
 </div>
 
+<br>
+
 <div>
-  <%= link_to "Back to #{@lot.stadium.team} lots", lots_path(@lot.stadium.name), class: "btn btn-outline-primary m-2" %>
+  <%= link_to "Back to #{@lot.stadium.team} lots", lots_by_stadium_path(@lot.stadium.name), class: "btn btn-outline-primary m-2" %>
 </div>

@@ -27,7 +27,7 @@ class LotsController < ApplicationController
 
     respond_to do |format|
       if @lot.save
-        format.html { redirect_to lot_url(@lot), notice: "Lot was successfully created." }
+        format.html { redirect_to lot_by_stadium_url(@lot.name), notice: "Lot was successfully created." }
         format.json { render :show, status: :created, location: @lot }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -75,6 +75,6 @@ class LotsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def lot_params
-      params.require(:lot).permit(:address, :description, :name, :link, :stadium_id_id)
+      params.require(:lot).permit(:address, :description, :name, :link, :stadium_id)
     end
 end

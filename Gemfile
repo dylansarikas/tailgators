@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.1"
 
+# Simple forms for devise
+gem 'simple_form'
+
 # User catch all
 gem "devise"
 

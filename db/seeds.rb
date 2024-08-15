@@ -14,7 +14,7 @@ Stadium.create(latitude: "42.340115", longitude: "-83.046341", name: "Ford Field
 Stadium.create(latitude: "44.973774", longitude: "-93.258736", name: "US Bank Stadium", team: "Minnesota Vikings", image: "usbank.jpg", description: "The Minnesota Vikings are a professional American football team based in Minneapolis, Minnesota. Founded in 1960, they are a member of the National Football League. Known for their distinctive purple and gold uniforms and their Viking mascot, the team has a storied history and a passionate fan base. The Vikings have won numerous division titles and appeared in four Super Bowls. They play their home games at U.S. Bank Stadium, a state-of-the-art facility in downtown Minneapolis.", nick_name: "vikings")
 
 ### Users ###
-User.create(email: "hungusbungus@example.com", password: "password", username: "pinballfan1")
+User.create(email: "sample@example.com", password: "password", username: "pinballfan1")
 
 ### Bears Hotels ###
 Hotel.create(name: "The Congress Plaza Hotel", address: "520 South Michigan Avenue, Chicago, IL 60605", link: "https://www.congressplazahotel.com/", description: "Step inside and experience an extraordinary piece of living history during your next visit to downtown Chicago at the Congress Plaza Hotel. This 'Landmark of Chicago Hospitality' has delighted business and leisure travelers for over a century.", stadium_id: 1)

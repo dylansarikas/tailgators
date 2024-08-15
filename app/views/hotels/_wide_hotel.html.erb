@@ -10,6 +10,9 @@
     <a href="<%= hotel.link %>" target="_blank" class="btn btn-primary">Website link</a>
   </div>
   <div class="card-footer text-body-secondary">
-    <%= link_to "Edit this Hotel", edit_hotel_path(@hotel.name), class: "btn btn-outline-success m-1" %>
+    <!--pundit this-->
+    <% if current_user %>
+      <%= link_to "Edit this Hotel", edit_hotel_path(@hotel.name), class: "btn btn-outline-success m-1" %>
+    <% end %>
   </div>
 </div>

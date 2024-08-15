@@ -40,7 +40,7 @@ class LotsController < ApplicationController
   def update
     respond_to do |format|
       if @lot.update(lot_params)
-        format.html { redirect_to lot_url(@lot), notice: "Lot was successfully updated." }
+        format.html { redirect_to lot_by_stadium_url(@lot.name), notice: "Lot was successfully updated." }
         format.json { render :show, status: :ok, location: @lot }
       else
         format.html { render :edit, status: :unprocessable_entity }

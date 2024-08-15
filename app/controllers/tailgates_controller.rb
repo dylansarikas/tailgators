@@ -1,7 +1,7 @@
 class TailgatesController < ApplicationController
+  before_action :set_tailgate_id, only: :update
   before_action :set_tailgate_name, only: %i[ show edit destroy ]
   before_action :set_stadium, only: :by_stadium
-  before_action :set_tailgate_id, only: :update
 
   # GET /tailgates or /tailgates.json
   def index

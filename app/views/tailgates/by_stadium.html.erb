@@ -8,4 +8,11 @@
   <% end %>
 </div>
 
-<%= link_to "New tailgate", new_tailgate_path, class: "btn btn-outline-success m-2"%>
+<div class="d-flex justify-content-center">
+  <div>
+    <%= link_to "New tailgate", new_tailgate_path, class: "btn btn-outline-success m-2"%>
+  </div>
+  <div>
+    <%= link_to "Back to stadium", stadium_path(@stadium_tailgate.name), class: "btn btn-outline-primary m-2"%>
+  </div>
+</div>

@@ -2,9 +2,11 @@
 
 <h1>Restaurants</h1>
 
-<div id="restaurants">
+<div class="d-flex p-2 justify-content-around flex-wrap">
   <% @restaurants.each do |restaurant| %>
-    <%= render restaurant %>
+    <div class="m-3">
+      <%= render restaurant %>
+    </div>
   <% end %>
 </div>
 

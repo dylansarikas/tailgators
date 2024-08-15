@@ -2,9 +2,11 @@
 
 <h1>Lots</h1>
 
-<div id="lots">
+<div class="d-flex p-2 justify-content-around flex-wrap">
   <% @lots.each do |lot| %>
-    <%= render lot %>
+    <div class="m-3">
+      <%= render lot %>
+    </div>
   <% end %>
 </div>
 

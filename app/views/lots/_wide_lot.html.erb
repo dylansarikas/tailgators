@@ -10,6 +10,9 @@
     <a href="<%= lot.link %>" target="_blank" class="btn btn-primary">Parking Link</a>
   </div>
   <div class="card-footer text-body-secondary">
-    <%= link_to "Edit this Parking Lot", edit_lot_path(@lot.name), class: "btn btn-outline-success m-1" %>
+    <!--pundit this-->
+    <% if false %>
+      <%= link_to "Edit this Parking Lot", edit_lot_path(@lot.name), class: "btn btn-outline-success m-1" %>
+    <% end %>
   </div>
 </div>

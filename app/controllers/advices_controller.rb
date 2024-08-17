@@ -7,6 +7,8 @@ class AdvicesController < ApplicationController
 
   def edit; end
 
+  def show; end
+
   def create
     @advice = Advice.new(advice_params)
 
@@ -24,7 +26,7 @@ class AdvicesController < ApplicationController
   def update
     respond_to do |format|
       if @advice.update(advice_params)
-        format.html { redirect_to advice_url(@advice), notice: 'Advice was successfully updated.' }
+        format.html { redirect_back_or_to advice_url(@advice), notice: 'Advice was successfully updated.' }
         format.json { render :show, status: :ok, location: @advice }
       else
         format.html { render :edit, status: :unprocessable_entity }

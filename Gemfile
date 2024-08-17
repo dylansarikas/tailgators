@@ -16,8 +16,6 @@ gem 'pg', '~> 1.1'
 gem 'puma'
 gem 'rails', '~> 7.1.3', '>= 7.1.3.2'
 gem 'redis', '~> 4.0'
-gem 'rubocop', '~> 1.65', require: false
-gem 'rubocop-rails', require: false
 gem 'simple_form'
 gem 'sprockets-rails'
 gem 'sqlite3', '~> 1.4'
@@ -39,6 +37,8 @@ group :development do
   gem 'pry-rails'
   gem 'rails_db'
   gem 'rails-erd'
+  gem 'rubocop', '~> 1.65', require: false
+  gem 'rubocop-rails', require: false
   gem 'rufo'
   gem 'specs_to_readme'
   gem 'web-console'

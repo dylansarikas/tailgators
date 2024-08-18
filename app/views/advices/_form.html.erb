@@ -2,7 +2,6 @@
   <% if advice.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(advice.errors.count, "error") %> prohibited this advice from being saved:</h2>
-
       <ul>
         <% advice.errors.each do |error| %>
           <li><%= error.full_message %></li>

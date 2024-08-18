@@ -1,11 +1,5 @@
-<%# content_for :head do %>
-  <%#= stylesheet_link_tag "advice" %>
-<%# end %>
-
-<!--here begins the nightmare comment from uiverse-->
-
+<!--here begins the comment from uiverse-->
 <div class="card-advice">
-  <!--<span class="title">Comments</span>-->
   <div class="comments">
     <div class="comment-react d-flex flex-column align-items-center">
       <%= render "advices/likes", advice: advice %>
@@ -37,7 +31,6 @@
           <% end %>
         </div>
       </div>
-        
       <p class="comment-content">
         <%= advice.body %>
       </p>

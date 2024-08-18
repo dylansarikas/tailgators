@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   resources :stadiums, only: [:index]
   resources :tailgates, except: [:show, :edit]
-  resources :advices, except: [:index, :show]
+  resources :advices, only: [:new, :show, :edit, :create, :update, :destroy]
   resources :hotels, only: [:new, :create, :update]
   resources :lots, except: [:index, :delete, :show, :edit]
   resources :restaurants, except: [:index, :delete, :show, :edit]

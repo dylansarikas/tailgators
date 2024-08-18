@@ -10,8 +10,7 @@
     <a href="<%= tailgate.link %>" target="_blank" class="btn btn-primary">Website Link</a>
   </div>
   <div class="card-footer text-body-secondary">
-    <!--pundit this-->
-    <% if false %>
+    <% if current_user %>
       <%= link_to "Edit this Tailgate", edit_tailgate_path(@tailgate.name), class: "btn btn-outline-success m-1" %>
     <% end %>
   </div>

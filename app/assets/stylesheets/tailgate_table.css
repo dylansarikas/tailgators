@@ -14,7 +14,6 @@
 
 .table-tailgate tr:nth-child(odd) {
   background-color: #f5f5f5;
-  /* background-color: white; */
 }
 
 .table-tailgate tr:hover {background-color: #b1b1b1;}

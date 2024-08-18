@@ -7,8 +7,4 @@ class Stadium < ApplicationRecord
   has_many :lots
   has_many :restaurants
   has_many :advices, as: :adviceable, dependent: :delete_all
-
-  def alias
-    team.parameterize(separator: '_')
-  end
 end

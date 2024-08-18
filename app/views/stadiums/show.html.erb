@@ -40,7 +40,6 @@
 <h3>Share your tips!  </h3>
 
 <div  class="card-body">
-  <!--i dont understand why stadium.advice.build doesnt work-->
   <% if current_user %>
     <%= render "advices/form", advice: Advice.new(adviceable_id: @stadium.id, adviceable_type: @stadium.class, user_id: current_user.id) %>    
   <% end %>

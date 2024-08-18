@@ -37,10 +37,9 @@
   <% end %>
 </ul>
 
-<h3>Share your tips!  </h3>
-
 <div  class="card-body">
   <% if current_user %>
+    <h3>Share your tips!</h3>
     <%= render "advices/form", advice: Advice.new(adviceable_id: @stadium.id, adviceable_type: @stadium.class, user_id: current_user.id) %>    
   <% end %>
 

@@ -1,14 +1,9 @@
 <div class="d-flex justify-content-center">
-  <%#= render @tailgate %>
   <%= render "wide_tailgate", :tailgate => @tailgate %>
 </div>
 
 <div>
-  <%#= link_to "Edit this Tailgate", edit_tailgate_path(@tailgate), class: "btn btn-outline-success m-1" %>
-
   <%= render "map_card", :map => @tailgate %>
-
-  <%#= button_to "Delete Tailgate", @tailgate, class: "btn btn-outline-danger m-1", method: :delete %>
 </div>
 
 
@@ -25,8 +20,8 @@
 </ul>
 
 <div  class="card-body">
-  <!--i dont understand why stadium.advice.build doesnt work-->
   <% if current_user %>
+    <h3>Share your tips!</h3>
     <%= render "advices/form", advice: Advice.new(adviceable_id: @tailgate.id, adviceable_type: @tailgate.class, user_id: current_user.id) %>
   <% end %>
   

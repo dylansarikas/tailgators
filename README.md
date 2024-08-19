@@ -11,6 +11,8 @@
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Configuration](#configuration)
+- [ERD](#erd)
 
 ## Installation
 
@@ -36,3 +38,16 @@
 
 2. Open your browser and navigate to http://localhost:3000
 Follow the on-screen instructions to use the application
+
+3. You can use the sign in of "tester@example.com" with the password of "password" to sign in
+
+## Configuration
+
+1. A Google Maps API key for Static Images must be set up so the images are displayed correctly.  
+
+2. The key can be stored in credentials.yml along with a master key.  
+
+3. The API key can be accessed with Rails.application.credentials.google_maps_key after it is set up with rails credentials.
+
+## ERD
+![ERD](erd.png)

@@ -33,10 +33,12 @@
 
 ## Usage
 
-1. Start the Rails server:
+1. Seeds MUST be run, or the website will not function.  db:create => db:migrate => db:seed
+
+2. Start the Rails server:
 `bin/dev`
 
-2. Open your browser and navigate to http://localhost:3000
+3. Open your browser and navigate to http://localhost:3000
 Follow the on-screen instructions to use the application
 
 3. You can use the sign in of "tester@example.com" with the password of "password" to sign in

@@ -8,6 +8,8 @@ class Advice < ApplicationRecord
 
   has_many :fans, through: :likes
 
+  # Great job using scopes
+
   scope :default_order, -> { order(created_at: :asc) }
   scope :by_likes, -> { order(likes_count: :desc) }
 end

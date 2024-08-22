@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   get "/features" => "pages#features"
   get "/faq" => "pages#faq"
   get "/about" => "pages#about"
-  
+
   devise_for :users
-  
+
   resources :stadiums, only: [:index]
   resources :tailgates, except: [:show, :edit]
   resources :advices, only: [:new, :show, :edit, :create, :update, :destroy]
@@ -14,10 +14,11 @@ Rails.application.routes.draw do
   resources :lots, except: [:index, :delete, :show, :edit]
   resources :restaurants, except: [:index, :delete, :show, :edit]
   resources :likes, only: [:create, :destroy]
-  
+
 
   # get "hotels/:name" => "hotels#show", as: :hotel
-  # Could do nested routes for hotels and tailgates
+  # TODO: Could do nested routes for hotels and tailgates
+
 
   get ":name" => "stadiums#show", as: :stadium
 

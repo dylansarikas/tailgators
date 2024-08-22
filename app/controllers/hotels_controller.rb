@@ -43,6 +43,8 @@ class HotelsController < ApplicationController
 
   private
 
+  # Great use of private methods to keep code DRY in the controller. Potenitally could move this logic to a concern to not have to write them out in all the controllers.
+
   def set_hotel_name
     @hotel = Hotel.find_by(name: params[:name])
   end

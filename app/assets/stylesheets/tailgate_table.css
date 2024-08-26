@@ -58,6 +58,10 @@
   background-color: #4F2683;
 }
 
+.chiefs-row th {
+  background-color: #E31837;
+}
+
 .table-link-name {
   color: black;
 }

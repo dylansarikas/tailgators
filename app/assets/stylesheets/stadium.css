@@ -23,6 +23,11 @@
   color: white;
 }
 
+.wide-raiders {
+  background-color: #000000;
+  color: white;
+}
+
 .wide-small-text {
   color: white
 }
@@ -49,5 +54,10 @@
 
 .btn-chiefs {
   background-color: #E31837;
+  color: white;
+}
+
+.btn-raiders {
+  background-color: #000000;
   color: white;
 }

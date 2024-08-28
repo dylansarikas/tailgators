@@ -62,6 +62,10 @@
   background-color: #E31837;
 }
 
+.raiders-row th {
+  background-color: #000000;
+}
+
 .table-link-name {
   color: black;
 }

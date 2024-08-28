@@ -1,3 +1,29 @@
 <h1>
   <%= @user.username %>
 </h1>
+
+<h2>
+  Own Advice
+</h2>
+
+<ul>
+  <% @user.own_advices.each do |advice| %>
+    <li>
+      <%= advice.body %>
+    </li>
+  <% end %>
+</ul>
+
+<br>
+
+<h2>
+  Liked Advice
+</h2>
+
+<ul>
+  <% @user.liked_advices.each do |advice| %>
+    <li>
+      <%= advice.body %>
+    </li>
+  <% end %>
+</ul>

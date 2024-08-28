@@ -10,7 +10,7 @@ class StadiumsController < ApplicationController
   private
 
   def set_stadium
-    @stadium = Stadium.find_by(name: params[:name])
+    @stadium = Stadium.find_by!(name: params[:name])
   end
 
   def stadium_params

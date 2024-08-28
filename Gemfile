@@ -14,6 +14,7 @@ gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg', '~> 1.1'
 gem 'puma'
+gem "pundit"
 gem 'rails', '~> 7.1.3', '>= 7.1.3.2'
 gem 'redis', '~> 4.0'
 gem 'simple_form'

@@ -9,7 +9,7 @@
 <ul>
   <% @user.own_advices.each do |advice| %>
     <li>
-      <%= advice.body %>
+      + <%= advice.likes_count %> | <%= advice.body %>  <%= render "shared/adviceable_link", :advice => advice %>
     </li>
   <% end %>
 </ul>

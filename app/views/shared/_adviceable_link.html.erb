@@ -1,0 +1,18 @@
+<% if advice.adviceable_type == "Stadium" %>
+  <%= link_to "link", stadium_path(Stadium.find(advice.adviceable_id).name) %>
+  
+<% elsif advice.adviceable_type == "Hotel" %>
+  <%= link_to "link", hotel_by_stadium_path(Hotel.find(advice.adviceable_id).name) %>
+
+<% elsif advice.adviceable_type == "Tailgate" %>
+  <%= link_to "link", tailgate_by_stadium_path(Tailgate.find(advice.adviceable_id).name) %>
+
+<% elsif advice.adviceable_type == "Restaurant" %>
+  <%= link_to "link", restaurant_by_stadium_path(Restaurant.find(advice.adviceable_id).name) %>
+
+<% elsif advice.adviceable_type == "Lot" %>
+  <%= link_to "link", lot_by_stadium_path(Lot.find(advice.adviceable_id).name) %>
+
+<% else %>
+  <p>oops</p>
+<% end %>

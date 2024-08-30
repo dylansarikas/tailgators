@@ -6,9 +6,9 @@
   Own Advice
 </h2>
 
-<ul>
+<ul class="list-group list-group-flush">
   <% @user.own_advices.each do |advice| %>
-    <li>
+    <li class="list-group-item list-group-item-action">
       + <%= advice.likes_count %> | <%= advice.body %>  <%= render "shared/adviceable_link", :advice => advice %>
     </li>
   <% end %>
@@ -20,10 +20,10 @@
   Liked Advice
 </h2>
 
-<ul>
+<ul class="list-group list-group-flush">
   <% @user.liked_advices.each do |advice| %>
-    <li>
-      <%= advice.body %>
+    <li class="list-group-item list-group-item-action">
+       <%= advice.likes_count %> | <%= advice.body %> <%= render "shared/adviceable_link", :advice => advice %>
     </li>
   <% end %>
 </ul>

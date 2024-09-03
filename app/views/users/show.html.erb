@@ -1,0 +1,29 @@
+<h1>
+  <%= @user.username %>
+</h1>
+
+<h2>
+  Own Advice
+</h2>
+
+<ul class="list-group list-group-flush">
+  <% @user.own_advices.each do |advice| %>
+    <li class="list-group-item list-group-item-action">
+      + <%= advice.likes_count %> | <%= advice.body %>  <%= render "shared/adviceable_link", :advice => advice %>
+    </li>
+  <% end %>
+</ul>
+
+<br>
+
+<h2>
+  Liked Advice
+</h2>
+
+<ul class="list-group list-group-flush">
+  <% @user.liked_advices.each do |advice| %>
+    <li class="list-group-item list-group-item-action">
+       <%= advice.likes_count %> | <%= advice.body %> <%= render "shared/adviceable_link", :advice => advice %>
+    </li>
+  <% end %>
+</ul>

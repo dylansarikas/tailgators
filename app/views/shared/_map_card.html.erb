@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Clickable Location Shared</h5>
+    <h5 class="card-title">Clickable Address Shared</h5>
   </div>
   <a href="https://www.google.com/maps/place/<%=map.latitude%>,<%=map.longitude%>" target="_blank">
     <img src="https://maps.googleapis.com/maps/api/staticmap?center=<%=map.latitude%>,<%=map.longitude%>&zoom=14&size=700x150&markers=color:red%7Clabel:Hotel%7C<%=map.latitude%>,<%=map.longitude%>&key=<%= Rails.application.credentials.google_maps_key %>" class="card-img-bottom" alt=<%= map.name %>>

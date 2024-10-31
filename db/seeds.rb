@@ -64,35 +64,35 @@ Hotel.create(name: 'Best Western Plus', address: '405 S 8th St, Minneapolis, MN 
              link: 'https://www.bestwestern.com/en_US/book/hotel-rooms.24091.html?iata=00170230&ssob=BLPBM0001L&checkIn=2024-08-31&checkOut=2024-09-01&rooms=1&adults=2&children=0&utm_content=ba&refid=5b9dc132-6c4b-4698-b43d-e157a404a452&cid=BLPBM0001L:tripadvisor:HDL:24091', description: "At the Best Western Plus The Normandy Inn & Suites you're sure to find that little something extra. With our modern amenities and thoughtful design, the Best Western Plus The Normandy Inn & Suites will stand out among other hotels in Minneapolis,MN.", stadium_id: 4)
 
 ### Tailgates Bears ###
-Tailgate.create(name: 'CHGO Bears Tailgate', location: '2200 S Wabash Ave, Chicago, IL, USA',
+Tailgate.create(name: 'CHGO Bears Tailgate', address: '2200 S Wabash Ave, Chicago, IL, USA',
                 link: 'https://allchgo.com/chgo-bears-tailgates/', description: 'All-inclusive tailgate experience gets you access to the biggest and best party in the Windy City! Enjoy tailgate food from Fire Water BBQ, brews from Goose Island, full bar games, and sounds from local DJs to keep the party going before the game.', stadium_id: 1)
-Tailgate.create(name: 'Miller Lite Ultimate Tailgate', location: '1400 S Lake Shore Dr, Chicago, IL 60605',
+Tailgate.create(name: 'Miller Lite Ultimate Tailgate', address: '1400 S Lake Shore Dr, Chicago, IL 60605',
                 link: 'https://www.chicagobears.com/game-day/guide', description: 'The Miller Lite Ultimate Tailgate is located on the north side of Soldier Field on the Field Museum terrace and will be open two hours before kickoff running through one hour postgame. The Ultimate Tailgate, which is free and open to the public and will feature music, activities, appearances by the Chicago Bears Drumline.', stadium_id: 1)
-Tailgate.create(name: '31st Street McCormick Place Lot B', location: '3050 Moe Dr, Chicago, IL 60616',
+Tailgate.create(name: '31st Street McCormick Place Lot B', address: '3050 Moe Dr, Chicago, IL 60616',
                 link: 'https://www.chicagobears.com/game-day/parking-transportation-guide', description: 'To get the full experience of seeing the Chicago Bears play at Soldier Field, you need to spend some time before the game tailgating with other fans. This gives you the opportunity to spend an entire day engaged in football activities.', stadium_id: 1)
 
 ### Tailgates Packers ###
-Tailgate.create(name: 'Johnsonville Tailgate', location: '1265 Lombardi Ave, Green Bay, WI 54304',
+Tailgate.create(name: 'Johnsonville Tailgate', address: '1265 Lombardi Ave, Green Bay, WI 54304',
                 link: 'https://www.packers.com/lambeau-field/johnsonville-tailgate-village', description: 'Located in the shadows of Lambeau Field, this 13, 242 square-foot temple has: a full kitchen, spacious bar, floor to ceiling windows, and overhead doors that open to a 4,300 square-foot party deck.  Listen to live music, enjoy great food and cold beverages and watch the game on any of the 35 plasma screens located throughout the Village.', stadium_id: 2)
-Tailgate.create(name: 'Outside Lambeau Field Lot One', location: 'Lot 1, S Oneida St, Green Bay, WI 54304',
+Tailgate.create(name: 'Outside Lambeau Field Lot One', address: 'Lot 1, S Oneida St, Green Bay, WI 54304',
                 link: 'https://www.packers.com/lambeau-field/parking', description: "Keep an eye out for the Lot One sign in Lambeau Field's parking lot, and you'll be greeted by a bustling gathering that welcomes fans of all kinds. Lot One is where you'll find devoted Packers enthusiasts who are dedicated to elevating the tailgating experience to new heights.", stadium_id: 2)
-Tailgate.create(name: 'Meet at The Bar Tailgate', location: '2001 Holmgren Way, Green Bay, Wisconsin 54304',
+Tailgate.create(name: 'Meet at The Bar Tailgate', address: '2001 Holmgren Way, Green Bay, Wisconsin 54304',
                 link: 'https://www.meetatthebar.com/gameday.html', description: 'Located just three blocks from Lambeau Field, The Bar - Holmgren Way is your official Packers headquarters.', stadium_id: 2)
 
 ### Tailgates Lions ###
-Tailgate.create(name: 'Bullseye Event Group Tailgate', location: '2934 Russell Street, Detroit MI 48207',
+Tailgate.create(name: 'Bullseye Event Group Tailgate', address: '2934 Russell Street, Detroit MI 48207',
                 link: 'https://bullseyeeventgroup.com/the-lions-vip-tailgate/#lions-tickets', description: 'Bullseye Event Group offers you the easiest & the best Lions gameday experience out there. Equipped with 3 bars, multiple soft leather lounge seating areas and plenty of TV’s for your ESPN gameday coverage.', stadium_id: 3)
-Tailgate.create(name: 'Detroit Lions Pride Plaza', location: '2000 Brush St, Detroit, MI 48226',
+Tailgate.create(name: 'Detroit Lions Pride Plaza', address: '2000 Brush St, Detroit, MI 48226',
                 link: 'https://www.detroitlions.com/game-day/pride-plaza-offseason', description: "Start your pre-game party at Pride Plaza on Brush Street, the Detroit Lions' official tailgate presented by Bud Light.  Located on Brush Street the tailgate offers exciting new interactive fan games and flat screen TVs to catch the pre-game show. ", stadium_id: 3)
-Tailgate.create(name: 'Eastern Market Lot', location: '2934 Russell Street, Detroit MI 48207',
+Tailgate.create(name: 'Eastern Market Lot', address: '2934 Russell Street, Detroit MI 48207',
                 link: 'https://easternmarket.org/markets/events/detroit-lions-eastern-market-tailgating-december', description: "Tailgating fans know that Eastern Market is the official hot spot for Lions parties. For years, fans have taken over the market's parking lots and lined Gratiot Avenue with food for grilling and footballs", stadium_id: 3)
 
 ### Tailgates Vikings ###
-Tailgate.create(name: 'Vikings Village Longhouse', location: '401 Chicago Ave, Minneapolis, MN 55415',
+Tailgate.create(name: 'Vikings Village Longhouse', address: '401 Chicago Ave, Minneapolis, MN 55415',
                 link: 'https://www.vikings.com/stadium/pre-game-fan-tailgate', description: 'The Vikings Village is the perfect place to get the party started before kickoff at U.S. Bank Stadium. Enjoy live entertainment from the Pepsi Sound the North Stage or grab a beverage from Molson Coors in the Pendleton Whiskey Longhouse with friends.', stadium_id: 4)
-Tailgate.create(name: 'Vikings Tailgate Garden', location: '425 Portland Ave S, Minneapolis, MN 55415',
+Tailgate.create(name: 'Vikings Tailgate Garden', address: '425 Portland Ave S, Minneapolis, MN 55415',
                 link: 'https://www.vikings.com/stadium/pre-game-fan-tailgate', description: 'The Vikings Tailgate Garden in the Commons Park outside U.S. Bank Stadium is your premier tailgate location on game day. Enjoy local food trucks and your favorite Molson Coors products.', stadium_id: 4)
-Tailgate.create(name: 'Purple Lot Tailgate', location: 'Stadium Parking Ramp 740 S 4th St.',
+Tailgate.create(name: 'Purple Lot Tailgate', address: 'Stadium Parking Ramp 740 S 4th St.',
                 link: 'https://www.usbankstadium.com/plan-your-visit/tailgating', description: 'Tailgating at the Purple Lot for the Minnesota Vikings is an electrifying experience that embodies the spirit of Vikings fandom. Located just steps away from U.S. Bank Stadium, the Purple Lot is a prime tailgating spot where fans gather to celebrate before the game. ', stadium_id: 4)
 
 ### Advices ###

@@ -75,6 +75,6 @@ class TailgatesController < ApplicationController
   end
 
   def tailgate_params
-    params.require(:tailgate).permit(:location, :name, :stadium_id, :description, :link)
+    params.require(:tailgate).permit(:address, :name, :stadium_id, :description, :link)
   end
 end

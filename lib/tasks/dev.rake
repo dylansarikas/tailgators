@@ -58,7 +58,7 @@ unless Rails.env.production?
       20.times do
         Tailgate.create(
           name: "#{Faker::Fantasy::Tolkien.location} Tailgate",
-          location: Faker::Address.full_address.to_s,
+          address: Faker::Address.full_address.to_s,
           stadium_id: Stadium.all.sample.id
         )
       end

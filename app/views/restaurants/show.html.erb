@@ -2,7 +2,11 @@
   <%= render "wide_restaurant", :restaurant => @restaurant %>
 </div>
 
-<%= render "map_card", :map => @restaurant %>
+<br>
+
+<div class="d-flex justify-content-center">
+  <%= render "/shared/map_card", :map => @restaurant %>
+</div>
 
 <h3 class="mt-2">Helpful Tips!</h3>
 

@@ -1,5 +1,5 @@
 class Tailgate < ApplicationRecord
-  validates :name, :location, :stadium_id, presence: true
+  validates :name, :address, :stadium_id, presence: true
   validates :name, uniqueness: true
 
   belongs_to :stadium

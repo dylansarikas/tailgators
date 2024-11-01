@@ -11,13 +11,13 @@
       <table class="table-tailgate m-2 <%=stadium.nick_name%>-row">
         <tr>
           <th scope="col">Name</th>
-          <th scope="col">Location</th>
+          <th scope="col">Address</th>
           <th scope="col">Link</th>
         </tr>
         <% stadium.tailgates.each do |tailgate| %>
           <tr>
             <td> <%= tailgate.name %> </td>
-            <td> <%= tailgate.location %> </td>
+            <td> <%= tailgate.address %> </td>
             <td>
               <%= link_to tailgate_by_stadium_path(tailgate.name), class: "card-header" do %>
                 Tailgate page

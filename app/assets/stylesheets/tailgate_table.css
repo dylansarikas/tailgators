@@ -66,6 +66,14 @@
   background-color: #000000;
 }
 
+.broncos-row th {
+  background-color: #FB4F14;
+}
+
+.chargers-row th {
+  background-color: #0080C6;
+}
+
 .table-link-name {
   color: black;
 }

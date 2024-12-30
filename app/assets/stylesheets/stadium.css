@@ -33,6 +33,11 @@
   color: white;
 }
 
+.wide-chargers {
+  background-color: #0080C6;
+  color: white;
+}
+
 .wide-small-text {
   color: white
 }
@@ -69,5 +74,10 @@
 
 .btn-broncos {
   background-color: #FB4F14;
+  color: white;
+}
+
+.btn-chargers {
+  background-color: #0080C6;
   color: white;
 }

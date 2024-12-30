@@ -70,6 +70,10 @@
   background-color: #FB4F14;
 }
 
+.chargers-row th {
+  background-color: #0080C6;
+}
+
 .table-link-name {
   color: black;
 }

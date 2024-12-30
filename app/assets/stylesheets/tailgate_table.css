@@ -66,6 +66,10 @@
   background-color: #000000;
 }
 
+.broncos-row th {
+  background-color: #FB4F14;
+}
+
 .table-link-name {
   color: black;
 }

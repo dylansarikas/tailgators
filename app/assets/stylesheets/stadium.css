@@ -38,6 +38,11 @@
   color: white;
 }
 
+.wide-seahawks {
+  background-color: #69BE28;
+  color: white;
+}
+
 .wide-small-text {
   color: white
 }
@@ -79,5 +84,10 @@
 
 .btn-chargers {
   background-color: #0080C6;
+  color: white;
+}
+
+.btn-seahawks {
+  background-color: #69BE28;
   color: white;
 }

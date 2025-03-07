@@ -74,6 +74,10 @@
   background-color: #0080C6;
 }
 
+.seahawks-row th {
+  background-color: #69BE28;
+}
+
 .table-link-name {
   color: black;
 }

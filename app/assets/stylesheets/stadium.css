@@ -38,6 +38,26 @@
   color: white;
 }
 
+.wide-seahawks {
+  background-color: #69BE28;
+  color: white;
+}
+
+.wide-sf49ers {
+  background-color: #B3995D;
+  color: white;
+}
+
+.wide-rams {
+  background-color: #003594;
+  color: white;
+}
+
+.wide-cardinals {
+  background-color: #97233F;
+  color: white;
+}
+
 .wide-small-text {
   color: white
 }
@@ -79,5 +99,25 @@
 
 .btn-chargers {
   background-color: #0080C6;
+  color: white;
+}
+
+.btn-seahawks {
+  background-color: #69BE28;
+  color: white;
+}
+
+.btn-rams {
+  background-color: #003594;
+  color: white;
+}
+
+.btn-sf4ers {
+  background-color: #B3995D;
+  color: white;
+}
+
+.btn-cardinals {
+  background-color: #97233F;
   color: white;
 }

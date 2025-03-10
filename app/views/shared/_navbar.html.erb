@@ -31,9 +31,20 @@
             <li><%= link_to "Kansas City Chiefs", stadium_path("Arrowhead Stadium"), class: "dropdown-item" %></li>
             <li><%= link_to "Las Vegas Raiders", stadium_path("Allegiant Stadium"), class: "dropdown-item" %></li>
             <li><%= link_to "Denver Broncos", stadium_path("Mile High Stadium"), class: "dropdown-item" %></li>
-            <li><%= link_to "Los Angeles Chargers", stadium_path("SoFi Stadium"), class: "dropdown-item" %></li>
+            <li><%= link_to "Los Angeles Chargers", stadium_path("SoFi Stadium (Chargers)"), class: "dropdown-item" %></li>
           </ul>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            NFC West
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Seattle Seahawks", stadium_path("Lumen Field"), class: "dropdown-item" %></li>
+            <li><%= link_to "Los Angeles Rams", stadium_path("SoFi Stadium (Rams)"), class: "dropdown-item" %></li>
+            <li><%= link_to "San Francisco 49ers", stadium_path("Levi's Stadium"), class: "dropdown-item" %></li>
+            <li><%= link_to "Arizona Cardinals", stadium_path("State Farm Stadium"), class: "dropdown-item" %></li>
+          </ul>
+        </ul>
         <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to "Settings", edit_user_registration_path, class: "nav-link" %>

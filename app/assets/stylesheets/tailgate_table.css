@@ -74,6 +74,22 @@
   background-color: #0080C6;
 }
 
+.seahawks-row th {
+  background-color: #69BE28;
+}
+
+.rams-row th {
+  background-color: #003594;
+}
+
+.sf49ers-row th {
+  background-color: #B3995D;
+}
+
+.cardinals-row th {
+  background-color: #97233F;
+}
+
 .table-link-name {
   color: black;
 }

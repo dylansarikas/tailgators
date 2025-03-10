@@ -43,6 +43,11 @@
   color: white;
 }
 
+.wide-sf49ers {
+  background-color: #B3995D;
+  color: white;
+}
+
 .wide-rams {
   background-color: #003594;
   color: white;
@@ -99,5 +104,10 @@
 
 .btn-rams {
   background-color: #003594;
+  color: white;
+}
+
+.btn-sf4ers {
+  background-color: #B3995D;
   color: white;
 }

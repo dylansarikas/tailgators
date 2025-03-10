@@ -78,6 +78,10 @@
   background-color: #69BE28;
 }
 
+.rams-row th {
+  background-color: #003594;
+}
+
 .table-link-name {
   color: black;
 }

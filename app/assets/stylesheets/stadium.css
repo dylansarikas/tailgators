@@ -43,6 +43,11 @@
   color: white;
 }
 
+.wide-rams {
+  background-color: #003594;
+  color: white;
+}
+
 .wide-small-text {
   color: white
 }
@@ -89,5 +94,10 @@
 
 .btn-seahawks {
   background-color: #69BE28;
+  color: white;
+}
+
+.btn-rams {
+  background-color: #003594;
   color: white;
 }

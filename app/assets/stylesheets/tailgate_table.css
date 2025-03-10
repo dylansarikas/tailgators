@@ -86,6 +86,10 @@
   background-color: #B3995D;
 }
 
+.cardinals-row th {
+  background-color: #97233F;
+}
+
 .table-link-name {
   color: black;
 }

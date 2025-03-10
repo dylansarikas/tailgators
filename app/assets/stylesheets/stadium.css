@@ -53,6 +53,11 @@
   color: white;
 }
 
+.wide-cardinals {
+  background-color: #97233F;
+  color: white;
+}
+
 .wide-small-text {
   color: white
 }
@@ -109,5 +114,10 @@
 
 .btn-sf4ers {
   background-color: #B3995D;
+  color: white;
+}
+
+.btn-cardinals {
+  background-color: #97233F;
   color: white;
 }
